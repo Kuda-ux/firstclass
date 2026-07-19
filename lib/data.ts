@@ -1,27 +1,37 @@
-// Static placeholder content. Replace via CMS when confirmed by the school.
+// Official school content — sourced directly from the director's documentation.
 
 export const siteSettings = {
   name: "First Class Private School",
   abbreviation: "FCPS",
   motto: "Non Ducor, Duco",
-  address: "8514/11 Mbizo, Kwekwe, Zimbabwe",
-  phones: ["+263 773 870 090", "+263 713 687 669"],
-  email: "info@firstclassprivate.ac.zw",
-  whatsapp: "+263 773 870 090",
+  tagline: "Building Tomorrow's Christian Leaders from Mbizo",
+  address: "Stand 8514 / 11, Mbizo, Kwekwe, Zimbabwe",
+  phones: ["+263 77 387 0090", "+263 71 368 7669"],
+  email: "firstclassprivateschool26@gmail.com",
+  whatsapp: "+263 77 387 0090",
   curricula: ["ZIMSEC", "Cambridge"],
-  offering: "Day school and boarding",
-  classSize: "Approximately 25 learners",
+  offering: "Day and boarding",
+  forms: "Forms 1–6",
+  type: "Christian-centred private day and boarding school",
+  registration: "Registered With The Ministry Of Primary And Secondary Education",
+  classSize: "Approximately 25 learners per class",
   officeHours: {
     weekday: "07:30 – 16:00",
     saturday: "08:00 – 12:00",
   },
   mapEmbedUrl:
-    "https://www.google.com/maps?q=8514/11+Mbizo,Kwekwe,Zimbabwe&output=embed",
+    "https://www.google.com/maps?q=Stand+8514+Mbizo+Kwekwe+Zimbabwe&output=embed",
+  bank: {
+    name: "Banc ABC",
+    branch: "Kwekwe",
+    accountName: "First Class Private School",
+    accountNumber: "92367955502123",
+    currency: "USD",
+  },
 };
 
 // ─── Semantically-mapped image constants ──────────────────────────────────────
-// Every image has been reviewed and placed on the page/section that matches
-// what it actually shows. Filenames are intentionally kept as-is.
+// Every image has been reviewed and placed on the page/section it shows.
 // ──────────────────────────────────────────────────────────────────────────────
 export const images = {
   // HOME: Hero — group of ~17 learners in maroon tracksuits at the FCPS gate
@@ -37,25 +47,25 @@ export const images = {
   aboutHeader: "/images/WhatsApp_Image_2026-07-17_at_10.40.17.jpeg",
 
   // ABOUT campus grid images (school buildings & reception)
-  aboutGrid1: "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",    // classroom block dusk
-  aboutGrid2: "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",    // new classroom block
-  aboutGrid3: "/images/WhatsApp_Image_2026-07-17_at_10.40.32_(2).jpeg",// campus buildings sunset
-  aboutGrid4: "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",    // campus at golden hour
-  aboutGrid5: "/images/WhatsApp_Image_2026-07-17_at_10.40.07.jpeg",    // reception "Welcome" banner
-  aboutGrid6: "/images/WhatsApp_Image_2026-07-17_at_10.40.33_(1).jpeg",// reception handshake
+  aboutGrid1: "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",     // classroom block dusk
+  aboutGrid2: "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",     // new classroom block
+  aboutGrid3: "/images/WhatsApp_Image_2026-07-17_at_10.40.32_(2).jpeg", // campus buildings sunset
+  aboutGrid4: "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",     // campus at golden hour
+  aboutGrid5: "/images/WhatsApp_Image_2026-07-17_at_10.40.07.jpeg",     // reception "Welcome" banner
+  aboutGrid6: "/images/WhatsApp_Image_2026-07-17_at_10.40.33_(1).jpeg", // reception handshake
 
   // ACADEMICS page header — "Form 4 Class" building, clearly labelled
   academics: "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",
 
   // ACADEMICS classroom strip images (school buildings)
-  classBuilding1: "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",    // classroom block evening
-  classBuilding2: "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",    // Form 4 block
-  classBuilding3: "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",    // new block daytime
-  classBuilding4: "/images/WhatsApp_Image_2026-07-17_at_10.40.30_(1).jpeg",// new block angle
-  classBuilding5: "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",    // campus at sunset
-  classBuilding6: "/images/WhatsApp_Image_2026-07-17_at_10.40.32_(2).jpeg",// campus sunset 2
-  classBuilding7: "/images/WhatsApp_Image_2026-07-17_at_10.40.13.jpeg",    // learners with forms
-  classBuilding8: "/images/WhatsApp_Image_2026-07-17_at_10.40.09.jpeg",    // FCPS banner in hall
+  classBuilding1: "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",     // classroom block evening
+  classBuilding2: "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",     // Form 4 block
+  classBuilding3: "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",     // new block daytime
+  classBuilding4: "/images/WhatsApp_Image_2026-07-17_at_10.40.30_(1).jpeg", // new block angle
+  classBuilding5: "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",     // campus at sunset
+  classBuilding6: "/images/WhatsApp_Image_2026-07-17_at_10.40.32_(2).jpeg", // campus sunset 2
+  classBuilding7: "/images/WhatsApp_Image_2026-07-17_at_10.40.13.jpeg",     // learners with forms
+  classBuilding8: "/images/WhatsApp_Image_2026-07-17_at_10.40.09.jpeg",     // FCPS banner in hall
 
   // ADMISSIONS page header — three girls in formal blazer uniform (full FCPS kit)
   admissions: "/images/WhatsApp_Image_2026-07-17_at_10.39.13.jpeg",
@@ -64,100 +74,128 @@ export const images = {
   boarding: "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",
 
   // BOARDING room interior images (actual dorms/bedrooms)
-  boardingRoom: "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",   // twin room with study desks
-  boardingDorm1: "/images/WhatsApp_Image_2026-07-17_at_10.34.29.jpeg",  // 3-bed dorm, pink blankets
-  boardingDorm2: "/images/WhatsApp_Image_2026-07-17_at_10.34.29_(1).jpeg", // bunk-bed dormitory
-  boardingDorm3: "/images/WhatsApp_Image_2026-07-17_at_10.34.29_(2).jpeg", // bunk-bed room 2
+  boardingRoom:  "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",      // twin room with study desks
+  boardingDorm1: "/images/WhatsApp_Image_2026-07-17_at_10.34.29.jpeg",      // 3-bed dorm, pink blankets
+  boardingDorm2: "/images/WhatsApp_Image_2026-07-17_at_10.34.29_(1).jpeg",  // bunk-bed dormitory
+  boardingDorm3: "/images/WhatsApp_Image_2026-07-17_at_10.34.29_(2).jpeg",  // bunk-bed room 2
 
   // TRANSPORT page header — full FCPS fleet (yellow van + white minibus + blue car)
   transport: "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",
 
   // TRANSPORT individual vehicle images
-  bus1: "/images/WhatsApp_Image_2026-07-17_at_10.39.45.jpeg",   // maroon/cream bus, side
-  bus2: "/images/WhatsApp_Image_2026-07-17_at_10.39.46.jpeg",   // bus, different lighting
-  bus3: "/images/WhatsApp_Image_2026-07-17_at_10.39.46_(1).jpeg",// bus, front-left angle
-  bus4: "/images/WhatsApp_Image_2026-07-17_at_10.39.46_(2).jpeg",// bus, similar to bus1
-  busRear: "/images/WhatsApp_Image_2026-07-17_at_10.39.47.jpeg", // bus rear with FCPS logo
-  bus5: "/images/WhatsApp_Image_2026-07-17_at_10.39.50.jpeg",   // bus, evening light
-  car1: "/images/WhatsApp_Image_2026-07-17_at_10.40.06.jpeg",   // FCPS blue Honda Jazz
-  car2: "/images/WhatsApp_Image_2026-07-17_at_10.40.34.jpeg",   // FCPS blue car front
-  fleet: "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",  // all vehicles together
+  bus1:    "/images/WhatsApp_Image_2026-07-17_at_10.39.45.jpeg",     // maroon/cream bus, side
+  bus2:    "/images/WhatsApp_Image_2026-07-17_at_10.39.46.jpeg",     // bus, different lighting
+  bus3:    "/images/WhatsApp_Image_2026-07-17_at_10.39.46_(1).jpeg", // bus, front-left angle
+  bus4:    "/images/WhatsApp_Image_2026-07-17_at_10.39.46_(2).jpeg", // bus, similar to bus1
+  busRear: "/images/WhatsApp_Image_2026-07-17_at_10.39.47.jpeg",     // bus rear with FCPS logo
+  bus5:    "/images/WhatsApp_Image_2026-07-17_at_10.39.50.jpeg",     // bus, evening light
+  car1:    "/images/WhatsApp_Image_2026-07-17_at_10.40.06.jpeg",     // FCPS blue Honda Jazz
+  car2:    "/images/WhatsApp_Image_2026-07-17_at_10.40.34.jpeg",     // FCPS blue car front
+  fleet:   "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",     // all vehicles together
 
   // STUDENT LIFE page header — large group at Chahwanda Stadium (sport trip)
   studentLife: "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",
 
-  // STUDENT LIFE tile images (each tile shows what it's labelled)
-  life1: "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",  // Academics → Form 4 Class building
-  life2: "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",  // Sport → Chahwanda Stadium trip
-  life3: "/images/WhatsApp_Image_2026-07-17_at_10.39.13.jpeg",  // Clubs → learners in formal blazer
-  life4: "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",  // Boarding → actual boarding room
-  life5: "/images/WhatsApp_Image_2026-07-17_at_10.40.00.jpeg",  // Trips → Chinese restaurant outing
-  life6: "/images/WhatsApp_Image_2026-07-17_at_10.39.10.jpeg",  // Community → group at FCPS gate
+  // STUDENT LIFE tile images (each tile shows what it is labelled)
+  life1: "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",     // Academics → Form 4 Class building
+  life2: "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",     // Sport → Chahwanda Stadium trip
+  life3: "/images/WhatsApp_Image_2026-07-17_at_10.39.13.jpeg",     // Clubs → learners in formal blazer
+  life4: "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",     // Boarding → actual boarding room
+  life5: "/images/WhatsApp_Image_2026-07-17_at_10.40.00.jpeg",     // Trips → Chinese restaurant outing
+  life6: "/images/WhatsApp_Image_2026-07-17_at_10.39.10.jpeg",     // Community → group at FCPS gate
 
   // CONTACT page header — school reception (welcoming, flowers, FCPS logo)
   contact: "/images/WhatsApp_Image_2026-07-17_at_10.40.17_(1).jpeg",
 
   // HOME MomentsGallery — 20 images that tell the full school story
   moments: [
-    "/images/WhatsApp_Image_2026-07-17_at_10.39.10.jpeg",   // learners at gate
-    "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",   // stadium trip
-    "/images/WhatsApp_Image_2026-07-17_at_10.40.00.jpeg",   // restaurant outing
-    "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",   // Form 4 building
-    "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",   // classroom dusk
-    "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",   // campus golden hour
-    "/images/WhatsApp_Image_2026-07-17_at_10.40.17.jpeg",   // school gate
-    "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",   // boarding room
-    "/images/WhatsApp_Image_2026-07-17_at_10.39.45.jpeg",   // FCPS bus
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.10.jpeg",    // learners at gate
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",    // stadium trip
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.00.jpeg",    // restaurant outing
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",    // Form 4 building
+    "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",    // classroom dusk
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",    // campus golden hour
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.17.jpeg",    // school gate
+    "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",    // boarding room
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.45.jpeg",    // FCPS bus
     "/images/WhatsApp_Image_2026-07-17_at_10.40.33_(1).jpeg",// reception meeting
-    "/images/WhatsApp_Image_2026-07-17_at_10.39.13.jpeg",   // uniform girls
-    "/images/WhatsApp_Image_2026-07-17_at_10.39.37.jpeg",   // winter uniform
-    "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",   // new building
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.13.jpeg",    // uniform girls
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.37.jpeg",    // winter uniform
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",    // new building
     "/images/WhatsApp_Image_2026-07-17_at_10.40.32_(2).jpeg",// campus sunset
-    "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",   // fleet photo
-    "/images/WhatsApp_Image_2026-07-17_at_10.39.47.jpeg",   // bus rear
-    "/images/WhatsApp_Image_2026-07-17_at_10.40.07.jpeg",   // reception "Welcome"
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",    // fleet photo
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.47.jpeg",    // bus rear
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.07.jpeg",    // reception "Welcome"
     "/images/WhatsApp_Image_2026-07-17_at_10.40.17_(1).jpeg",// reception flowers
-    "/images/WhatsApp_Image_2026-07-17_at_10.34.29.jpeg",   // dorm room
-    "/images/WhatsApp_Image_2026-07-17_at_10.40.06.jpeg",   // FCPS car
+    "/images/WhatsApp_Image_2026-07-17_at_10.34.29.jpeg",    // dorm room
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.06.jpeg",    // FCPS car
   ],
 };
 
+// ─── Home page ────────────────────────────────────────────────────────────────
+
 export const homeContent = {
   hero: {
-    headline: "A First-Class Foundation for Every Learner",
+    headline: "Building Tomorrow's Christian Leaders from Mbizo",
     subhead:
-      "First Class Private School provides ZIMSEC and Cambridge education in a disciplined, caring and ambitious environment where learners are encouraged to work hard, grow in confidence and take responsibility.",
+      "First Class Private School offers Forms 1\u20136 ZIMSEC and Cambridge education in a Christian-centred environment that develops academically excellent, morally upright and practically skilled learners for Zimbabwe and beyond.",
   },
   intro: {
-    title: "A school built on discipline, leadership and care",
+    title: "A Christian-centred school rooted in Mbizo, open to all",
     body: [
-      "At First Class Private School we believe that strong values create strong learners. Our motto, Non Ducor, Duco — I am not led, I lead — reminds every learner that character, confidence and initiative matter as much as academic achievement.",
-      "We serve families in Kwekwe and beyond, offering both day and boarding options, and guiding learners through ZIMSEC and Cambridge pathways in close partnership with parents and guardians.",
+      "At First Class Private School our motto Non Ducor, Duco \u2014 I am not led, I lead \u2014 captures our ambition for every learner. We combine rigorous academics with Christian values, Unhu/Ubuntu and practical skills, producing graduates who are competitive, innovative and committed to community development.",
+      "We serve learners from Mbizo and surrounding communities, offering inclusive and affordable day and boarding education from Form 1 through Form 6. All communication should be addressed to the Principal.",
     ],
   },
   whyChoose: [
-    { title: "Small classes", description: "Classes of approximately 25 learners so teachers can give personal attention." },
-    { title: "ZIMSEC & Cambridge", description: "Curriculum pathways that suit each learner’s strengths and future goals." },
-    { title: "Experienced teachers", description: "A dedicated teaching staff committed to academic growth and character." },
-    { title: "Christian values", description: "A values-based culture rooted in respect, honesty and service." },
-    { title: "Day & boarding", description: "Flexible enrolment for families who need day school or full boarding." },
-    { title: "Sport & culture", description: "Athletics, clubs and activities that build teamwork and confidence." },
+    {
+      title: "Christ-centred education",
+      description:
+        "Faith, Biblical principles and Christian values are woven into everything we do \u2014 from the classroom to the dormitory.",
+    },
+    {
+      title: "ZIMSEC & Cambridge",
+      description:
+        "Dual curriculum pathways giving every learner a recognised qualification suited to their future goals.",
+    },
+    {
+      title: "Small classes",
+      description:
+        "Approximately 25 learners per class so every student receives personal attention and genuine support.",
+    },
+    {
+      title: "Day & boarding",
+      description:
+        "Flexible enrolment for families across Mbizo and surrounding communities \u2014 day or full boarding available.",
+    },
+    {
+      title: "Holistic development",
+      description:
+        "Academic excellence, character formation, practical skills and community integration combined in one programme.",
+    },
+    {
+      title: "Affordable & accessible",
+      description:
+        "Quality private education at fees designed to be accessible to families in Mbizo and nearby areas.",
+    },
   ],
   head: {
     name: "Head of School",
-    title: "[Name to be confirmed]",
+    title: "Principal, First Class Private School",
     quote:
-      "This section contains a draft welcome message. Please replace it with the confirmed head’s welcome once it has been reviewed and approved by the school.",
+      "Our vision is to be the leading provider of quality Christ-centred secondary education in Kwekwe \u2014 developing well-rounded, academically excellent and morally upright citizens who contribute meaningfully to their communities.",
   },
   boardingTeaser: {
-    title: "A supportive boarding environment",
-    body: "Boarding at FCPS offers learners a structured, caring home away from home. Specific facilities and routines are available from the school office on request. Please contact us to arrange a visit or request the boarding information sheet.",
+    title: "A structured, caring home away from home",
+    body: "FCPS boarding provides learners with supervised routines, dedicated study time, meals and safe accommodation. Boarding fees are $800 per term and the full uniform package is $200. Contact the school office for a boarding information sheet or to arrange a visit.",
   },
   cta: {
-    title: "Give your child a strong academic foundation",
-    body: "Join a school that values discipline, confidence and personal growth. We invite parents to visit us, meet our staff and begin the admissions conversation.",
+    title: "Enrol your child at First Class Private School",
+    body: "Join a school committed to academic excellence, Christian values and community development. We welcome families from Mbizo and surrounding areas for Forms 1\u20136.",
   },
 };
+
+// ─── News & Events ────────────────────────────────────────────────────────────
 
 export const newsItems = [
   {
@@ -171,7 +209,7 @@ export const newsItems = [
   {
     id: "2",
     slug: "valentines-kindness",
-    title: "Valentine’s Kindness Activity",
+    title: "Valentine's Kindness Activity",
     excerpt: "Learners took part in a kindness campaign supporting the local community.",
     date: "2026-02-14",
     category: "Community",
@@ -193,7 +231,7 @@ export const upcomingEvents = [
     title: "Open Day",
     startDate: "2026-08-05",
     endDate: "2026-08-05",
-    time: "09:00 – 13:00",
+    time: "09:00 \u2013 13:00",
     location: "FCPS Main Campus",
     category: "Open day",
     featured: true,
@@ -204,7 +242,7 @@ export const upcomingEvents = [
     title: "Civics Day",
     startDate: "2026-08-15",
     endDate: "2026-08-15",
-    time: "08:00 – 14:00",
+    time: "08:00 \u2013 14:00",
     location: "School Grounds",
     category: "Culture",
     featured: false,
@@ -222,61 +260,230 @@ export const upcomingEvents = [
   },
 ];
 
+// ─── Downloads ────────────────────────────────────────────────────────────────
+
 export const downloads = [
-  { id: "1", title: "Prospectus", category: "Admissions", fileType: "PDF", fileSize: "—", updatedAt: "—" },
-  { id: "2", title: "Application Form", category: "Admissions", fileType: "PDF", fileSize: "—", updatedAt: "—" },
-  { id: "3", title: "Fees Document", category: "Finance", fileType: "PDF", fileSize: "—", updatedAt: "—" },
-  { id: "4", title: "Term Calendar", category: "Calendar", fileType: "PDF", fileSize: "—", updatedAt: "—" },
-  { id: "5", title: "Uniform List", category: "General", fileType: "PDF", fileSize: "—", updatedAt: "—" },
-  { id: "6", title: "Boarding Requirements", category: "Boarding", fileType: "PDF", fileSize: "—", updatedAt: "—" },
-  { id: "7", title: "Parent Notices", category: "Notices", fileType: "PDF", fileSize: "—", updatedAt: "—" },
-  { id: "8", title: "School Policies", category: "Policies", fileType: "PDF", fileSize: "—", updatedAt: "—" },
+  { id: "1", title: "2027 Requirements & Fees Flyer",  category: "Admissions", fileType: "PDF", fileSize: "\u2014", updatedAt: "\u2014" },
+  { id: "2", title: "Application Form",                category: "Admissions", fileType: "PDF", fileSize: "\u2014", updatedAt: "\u2014" },
+  { id: "3", title: "Uniform List",                    category: "Admissions", fileType: "PDF", fileSize: "\u2014", updatedAt: "\u2014" },
+  { id: "4", title: "Term Calendar",                   category: "Calendar",   fileType: "PDF", fileSize: "\u2014", updatedAt: "\u2014" },
+  { id: "5", title: "Boarding Information Sheet",      category: "Boarding",   fileType: "PDF", fileSize: "\u2014", updatedAt: "\u2014" },
+  { id: "6", title: "School Prospectus",               category: "General",    fileType: "PDF", fileSize: "\u2014", updatedAt: "\u2014" },
+  { id: "7", title: "Parent Notices",                  category: "Notices",    fileType: "PDF", fileSize: "\u2014", updatedAt: "\u2014" },
+  { id: "8", title: "School Policies",                 category: "Policies",   fileType: "PDF", fileSize: "\u2014", updatedAt: "\u2014" },
 ];
 
+// ─── About ────────────────────────────────────────────────────────────────────
+
 export const aboutContent = {
-  title: "About First Class Private School",
   intro:
-    "First Class Private School is a private day and boarding school in Mbizo, Kwekwe, Zimbabwe. We combine ZIMSEC and Cambridge curricula with a strong culture of discipline, leadership and care.",
+    "First Class Private School is a Christian-centred private day and boarding school in Mbizo, Kwekwe, Zimbabwe. Registered with the Ministry of Primary and Secondary Education, we offer Forms 1\u20136 through ZIMSEC and Cambridge curricula.",
+
+  vision:
+    "To be the leading provider of quality Christ-centred secondary education in Kwekwe, developing well-rounded, academically excellent, and morally upright citizens who are competitive, innovative, self-reliant and embody Christian values alongside Unhu/Ubuntu while contributing meaningfully to community development.",
+
+  mission:
+    "To promote and facilitate the provision of high quality, inclusive and affordable secondary education (Form 1\u20136) that is accessible to students from Mbizo and surrounding communities, fostering academic excellence, character development, and practical skills for national development.",
+
+  mandate:
+    "To provide comprehensive Christ-centred secondary education that bridges the gap between primary and tertiary education for students in Mbizo high density suburb and surrounding areas. We are committed to delivering accessible, quality education grounded in Christian values that empowers students to participate actively in Zimbabwe\u2019s socio-economic transformation while maintaining strong community roots and Biblical principles.",
+
   values: [
-    { title: "Discipline", description: "Clear boundaries, respectful behaviour and personal responsibility." },
-    { title: "Leadership", description: "Encouraging learners to take initiative and lead by example." },
-    { title: "Christian values", description: "A foundation of respect, honesty, kindness and service." },
-    { title: "Academic ambition", description: "A strong focus on effort, progress and clear learning goals." },
+    {
+      title: "Faith",
+      shona: "Kutenda / Kutendeka",
+      description:
+        "Our Christian foundation shapes every decision, relationship and aspiration within the school.",
+    },
+    {
+      title: "Excellence",
+      shona: "Kunaka / Kubudirira",
+      description:
+        "High standards in academic work, conduct and institutional performance are non-negotiable.",
+    },
+    {
+      title: "Integrity",
+      shona: "Kuvimbika / Unhu",
+      description:
+        "Honesty, moral uprightness and personal responsibility guide how we treat one another.",
+    },
+    {
+      title: "Love & Compassion",
+      shona: "Rudo neTsitsi",
+      description:
+        "Care, empathy and genuine support for every learner, family and community member.",
+    },
+    {
+      title: "Service",
+      shona: "Kushumira / Kubatsira",
+      description:
+        "We encourage learners to contribute to school, church, family, community and country.",
+    },
+    {
+      title: "Stewardship",
+      shona: "Kuchengeta / Kutarisa",
+      description:
+        "Responsible management of opportunities, abilities, property, the environment and community resources.",
+    },
+  ],
+
+  focusAreas: [
+    { title: "Academic Excellence",              description: "Rigorous teaching, regular assessment and continuous improvement towards national and international standards." },
+    { title: "Spiritual Development",            description: "Christian values and Biblical principles integrated into school life, assemblies and pastoral care." },
+    { title: "Character Development",            description: "Building integrity, resilience, discipline and leadership in every learner." },
+    { title: "Community Integration",            description: "Active participation in Mbizo and the wider Kwekwe community through service and outreach." },
+    { title: "Practical Skills Development",     description: "Hands-on learning in Agriculture, Computers, Textile and Design and other practical subjects." },
+    { title: "Cultural & Spiritual Integration", description: "Honouring Zimbabwean culture, Unhu/Ubuntu and Christian heritage alongside academic achievement." },
   ],
 };
+
+// ─── Academics ────────────────────────────────────────────────────────────────
 
 export const academicsContent = {
   title: "Academic Pathways",
   intro:
-    "FCPS offers both ZIMSEC and Cambridge curricula. Grade coverage, subject choices and entry requirements are confirmed annually by the school administration.",
+    "FCPS offers both ZIMSEC and Cambridge curricula for Forms 1\u20136. Our 15 subjects cover languages, humanities, commercial education, sciences, technology and practical skills.",
+
   pathways: [
     {
       name: "ZIMSEC",
       description:
-        "The Zimbabwe School Examinations Council pathway provides a locally recognised curriculum that prepares learners for national examinations and further study in Zimbabwe and the region.",
+        "The Zimbabwe School Examinations Council pathway provides a locally recognised curriculum that prepares learners for national examinations at Ordinary and Advanced levels, and for further study in Zimbabwe and the region.",
     },
     {
       name: "Cambridge",
       description:
-        "The Cambridge pathway offers an international curriculum with recognised qualifications. Specific stages, subjects and examination centres are confirmed by the school.",
+        "The Cambridge International pathway offers internationally recognised qualifications. Specific stages, subjects and examination centres are confirmed annually by the school administration.",
     },
   ],
+
+  // 15 officially listed subjects grouped by department
+  subjectGroups: [
+    {
+      category: "Languages & Humanities",
+      subjects: ["Shona", "English Language", "Geography", "History", "Heritage"],
+    },
+    {
+      category: "Commercial",
+      subjects: ["Commerce", "Accounts"],
+    },
+    {
+      category: "Mathematics & Sciences",
+      subjects: ["Mathematics", "Physics", "Chemistry", "Biology", "Combined Science"],
+    },
+    {
+      category: "Technology & Practical",
+      subjects: ["Computers", "Textile and Design", "Agriculture"],
+    },
+  ],
+
   note:
-    "Detailed subject lists, grade levels and academic calendars are available from the school office or can be downloaded from the Downloads page once confirmed.",
+    "Subject availability per form level is confirmed annually. Contact the school office for the current subject combination guide.",
 };
+
+// ─── Admissions & Fees ────────────────────────────────────────────────────────
+
+export const admissionsContent = {
+  intro:
+    "First Class Private School welcomes learners from Mbizo and surrounding communities for Forms 1\u20136. The information below is for the 2027 intake. All communication should be addressed to the Principal.",
+
+  // Fee schedule (2027 — USD)
+  fees: {
+    year: "2027",
+    items: [
+      { label: "Registration",              amount: 50,  note: "Non-refundable" },
+      { label: "Bus Levy",                  amount: 60,  note: "Once-off payment" },
+      { label: "Uniforms \u2014 Day Scholars", amount: 160, note: "Also covers Student ID & Cover Pages" },
+      { label: "Uniforms \u2014 Boarders",     amount: 200, note: "Also covers Student ID & Cover Pages" },
+      { label: "Computer & Science Levy",   amount: 20,  note: "" },
+      { label: "Report Book",               amount: 10,  note: "" },
+      { label: "Fees \u2014 Day Students",     amount: 300, note: "Per term" },
+      { label: "Fees \u2014 Boarding Students",amount: 800, note: "Per term" },
+    ],
+    firstTermTotals: {
+      dayStudent:      600,
+      boardingStudent: 1140,
+    },
+  },
+
+  // Uniform package (covered by the $160 / $200 uniform payment)
+  uniforms: {
+    note: "Covered by the $160 (day scholars) / $200 (boarders) uniform payment. Includes Student ID and Cover Pages.",
+    items: [
+      { item: "Short-sleeved shirt",  boardersQty: "3" },
+      { item: "Long-sleeved shirt",   boardersQty: "3" },
+      { item: "Tie",                  boardersQty: "" },
+      { item: "Blazer",               boardersQty: "" },
+      { item: "Skirt or Trousers",    boardersQty: "3 for boarders" },
+      { item: "T-shirt",              boardersQty: "" },
+      { item: "Sun Hat",              boardersQty: "" },
+      { item: "Short",                boardersQty: "" },
+      { item: "Jersey",               boardersQty: "" },
+      { item: "Anorak",               boardersQty: "" },
+      { item: "Track Suit",           boardersQty: "" },
+      { item: "Half Jersey",          boardersQty: "" },
+    ],
+  },
+
+  // Form 1 entry requirements
+  entryRequirements: {
+    heading: "Form 1 Entry Requirements",
+    documents: [
+      "Grade 7 Result Slip",
+      "Birth Certificate (photocopy)",
+      "Proof of Residence",
+    ],
+    stationery: [
+      "15 Counter Books",
+      "30 Exercise Books plus 3 Maths",
+      "Calculator",
+      "Mathematical Set",
+    ],
+  },
+
+  // Other requirements
+  otherRequirements: [
+    "4 Rolls Toilet Tissue (2-ply) per term",
+    "1 ream Bond Paper OR $5 per year",
+  ],
+
+  // Process steps
+  steps: [
+    {
+      title: "Enquire",
+      description:
+        "Call or WhatsApp us on +263 77 387 0090, or complete the online enquiry form below.",
+    },
+    {
+      title: "Submit Documents",
+      description:
+        "Bring your Grade 7 result slip, birth certificate copy and proof of residence to the school office.",
+    },
+    {
+      title: "Pay Registration",
+      description:
+        "Pay the $50 non-refundable registration fee to secure your child\u2019s place. Bank details are provided below.",
+    },
+  ],
+};
+
+// ─── Transport ────────────────────────────────────────────────────────────────
 
 export const transportContent = {
   title: "Transport & Bus Hire",
   intro:
     "FCPS provides school transport for day learners and hires buses for educational trips, church conferences, birthdays, funerals and other outings. Contact us for availability, routes and conditions.",
   services: [
-    "Daily learner transport",
-    "Educational-trip transport",
-    "General bus-hire enquiries",
+    "Daily learner transport (morning and afternoon)",
+    "Educational and cultural trip transport",
+    "Church conference transport",
+    "Bus hire for birthdays, funerals and private outings",
   ],
   note:
-    "Vehicle capacity, air-conditioning and certification details must be confirmed with the school office before booking.",
+    "Vehicle capacity, routes and availability must be confirmed with the school office before booking. A bus levy of $60 (once-off) applies to learners who use the school transport service.",
 };
+
+// ─── Legal ────────────────────────────────────────────────────────────────────
 
 export const privacyPolicy = `
 This Privacy Policy explains how First Class Private School collects, uses and protects personal information provided through this website, enquiry forms and the admissions process.
@@ -293,7 +500,7 @@ We store information securely and limit access to authorised staff. Paper record
 Your rights
 You may request access to, correction of or deletion of your personal information by contacting the school office.
 
-This draft policy is for administrator and legal review. It should be updated to reflect the school's final wording and legal requirements.
+Contact: firstclassprivateschool26@gmail.com | +263 77 387 0090
 `;
 
 export const termsOfUse = `
@@ -304,6 +511,4 @@ The content of this website is for general information and does not constitute a
 Intellectual property including the school name, logo and photographs belongs to First Class Private School and may not be used without permission.
 
 The school reserves the right to update this website and these terms at any time.
-
-This draft is for administrator review and should be finalised with appropriate legal advice.
 `;
