@@ -4,10 +4,10 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { homeContent, images } from "@/lib/data";
-import { ALL_IMAGES } from "@/lib/image-manifest";
 
 export function BoardingTeaser() {
-  const secondary = ALL_IMAGES[20] ?? images.boarding;
+  // Secondary overlap: actual boarding room interior (twin beds + desks)
+  const secondary = images.boardingRoom;
   return (
     <section className="bg-white py-20 md:py-28">
       <Container>

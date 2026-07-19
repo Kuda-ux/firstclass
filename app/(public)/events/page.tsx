@@ -34,7 +34,7 @@ export default function EventsPage() {
                 <article className="rounded-sm border border-soft bg-white p-6 shadow-sm">
                   <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
                     <div>
-                      <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold">
+                      <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1 text-xs font-semibold uppercase tracking-wider text-burgundy">
                         <Calendar className="h-3.5 w-3.5" />
                         {event.category}
                       </div>

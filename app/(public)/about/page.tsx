@@ -3,7 +3,6 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { aboutContent, homeContent, images } from "@/lib/data";
-import { ALL_IMAGES } from "@/lib/image-manifest";
 import Image from "next/image";
 
 export const metadata = {
@@ -18,7 +17,7 @@ export default function AboutPage() {
         eyebrow="About FCPS"
         title="About First Class Private School"
         description={aboutContent.intro}
-        image={images.aboutGrid1}
+        image={images.aboutHeader}
       />
 
       <section className="bg-cream py-20 md:py-28">
@@ -47,7 +46,7 @@ export default function AboutPage() {
                 <p className="font-serif text-2xl italic text-burgundy">
                   &ldquo;{homeContent.head.quote}&rdquo;
                 </p>
-                <p className="mt-2 text-sm text-gold">Draft welcome message — awaiting confirmation.</p>
+                <p className="mt-2 text-sm text-muted">Draft welcome message — awaiting confirmation.</p>
               </div>
             </FadeIn>
           </div>
@@ -88,7 +87,7 @@ export default function AboutPage() {
             />
           </FadeIn>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {ALL_IMAGES.slice(20, 26).map((src, idx) => (
+            {([images.aboutGrid1, images.aboutGrid2, images.aboutGrid3, images.aboutGrid4, images.aboutGrid5, images.aboutGrid6] as string[]).map((src, idx) => (
               <FadeIn key={src} delay={idx * 0.05}>
                 <div className="group relative aspect-[4/3] overflow-hidden rounded-sm">
                   <Image

@@ -16,6 +16,7 @@ export function AcademicPathways() {
             title="ZIMSEC and Cambridge"
             description={academicsContent.intro}
             align="center"
+            variant="dark"
             className="mx-auto mb-14 text-center"
           />
         </FadeIn>

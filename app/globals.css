@@ -31,10 +31,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Headings inherit text colour from their parent container so that
+   dark-background sections don't end up with near-invisible charcoal text. */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   font-weight: 700;
-  color: var(--color-charcoal);
+  color: inherit;
 }
 
 a {

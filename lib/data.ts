@@ -19,30 +19,107 @@ export const siteSettings = {
     "https://www.google.com/maps?q=8514/11+Mbizo,Kwekwe,Zimbabwe&output=embed",
 };
 
-import { ALL_IMAGES, LANDSCAPE_IMAGES, PORTRAIT_IMAGES } from "./image-manifest";
-
+// ─── Semantically-mapped image constants ──────────────────────────────────────
+// Every image has been reviewed and placed on the page/section that matches
+// what it actually shows. Filenames are intentionally kept as-is.
+// ──────────────────────────────────────────────────────────────────────────────
 export const images = {
-  hero: LANDSCAPE_IMAGES[0] ?? ALL_IMAGES[0],
-  intro: LANDSCAPE_IMAGES[2] ?? ALL_IMAGES[2],
-  head: PORTRAIT_IMAGES[0] ?? ALL_IMAGES[4],
-  boarding: LANDSCAPE_IMAGES[3] ?? ALL_IMAGES[3],
-  life1: ALL_IMAGES[10] ?? ALL_IMAGES[0],
-  life2: ALL_IMAGES[11] ?? ALL_IMAGES[1],
-  life3: ALL_IMAGES[12] ?? ALL_IMAGES[2],
-  life4: ALL_IMAGES[13] ?? ALL_IMAGES[3],
-  life5: ALL_IMAGES[14] ?? ALL_IMAGES[4],
-  life6: ALL_IMAGES[15] ?? ALL_IMAGES[5],
-  academics: LANDSCAPE_IMAGES[5] ?? ALL_IMAGES[6],
-  sports: LANDSCAPE_IMAGES[6] ?? ALL_IMAGES[7],
-  aboutGrid1: LANDSCAPE_IMAGES[7] ?? ALL_IMAGES[8],
-  aboutGrid2: LANDSCAPE_IMAGES[8] ?? ALL_IMAGES[9],
-  aboutGrid3: LANDSCAPE_IMAGES[9] ?? ALL_IMAGES[10],
-  aboutGrid4: LANDSCAPE_IMAGES[10] ?? ALL_IMAGES[11],
-  admissions: LANDSCAPE_IMAGES[11] ?? ALL_IMAGES[12],
-  transport: LANDSCAPE_IMAGES[13] ?? ALL_IMAGES[14],
-  contact: LANDSCAPE_IMAGES[14] ?? ALL_IMAGES[15],
-  studentLife: LANDSCAPE_IMAGES[15] ?? ALL_IMAGES[16],
-  moments: ALL_IMAGES.slice(0, 20),
+  // HOME: Hero — group of ~17 learners in maroon tracksuits at the FCPS gate
+  hero: "/images/WhatsApp_Image_2026-07-17_at_10.39.10.jpeg",
+
+  // HOME SchoolIntro — school reception with FCPS logo on the counter, flowers
+  intro: "/images/WhatsApp_Image_2026-07-17_at_10.40.17_(1).jpeg",
+
+  // HOME HeadWelcome — two men in suits shaking hands at the FCPS reception
+  head: "/images/WhatsApp_Image_2026-07-17_at_10.40.33_(1).jpeg",
+
+  // ABOUT page header — school main entrance gate with FCPS billboard and flags
+  aboutHeader: "/images/WhatsApp_Image_2026-07-17_at_10.40.17.jpeg",
+
+  // ABOUT campus grid images (school buildings & reception)
+  aboutGrid1: "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",    // classroom block dusk
+  aboutGrid2: "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",    // new classroom block
+  aboutGrid3: "/images/WhatsApp_Image_2026-07-17_at_10.40.32_(2).jpeg",// campus buildings sunset
+  aboutGrid4: "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",    // campus at golden hour
+  aboutGrid5: "/images/WhatsApp_Image_2026-07-17_at_10.40.07.jpeg",    // reception "Welcome" banner
+  aboutGrid6: "/images/WhatsApp_Image_2026-07-17_at_10.40.33_(1).jpeg",// reception handshake
+
+  // ACADEMICS page header — "Form 4 Class" building, clearly labelled
+  academics: "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",
+
+  // ACADEMICS classroom strip images (school buildings)
+  classBuilding1: "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",    // classroom block evening
+  classBuilding2: "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",    // Form 4 block
+  classBuilding3: "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",    // new block daytime
+  classBuilding4: "/images/WhatsApp_Image_2026-07-17_at_10.40.30_(1).jpeg",// new block angle
+  classBuilding5: "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",    // campus at sunset
+  classBuilding6: "/images/WhatsApp_Image_2026-07-17_at_10.40.32_(2).jpeg",// campus sunset 2
+  classBuilding7: "/images/WhatsApp_Image_2026-07-17_at_10.40.13.jpeg",    // learners with forms
+  classBuilding8: "/images/WhatsApp_Image_2026-07-17_at_10.40.09.jpeg",    // FCPS banner in hall
+
+  // ADMISSIONS page header — three girls in formal blazer uniform (full FCPS kit)
+  admissions: "/images/WhatsApp_Image_2026-07-17_at_10.39.13.jpeg",
+
+  // BOARDING page header — campus buildings at golden-hour sunset
+  boarding: "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",
+
+  // BOARDING room interior images (actual dorms/bedrooms)
+  boardingRoom: "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",   // twin room with study desks
+  boardingDorm1: "/images/WhatsApp_Image_2026-07-17_at_10.34.29.jpeg",  // 3-bed dorm, pink blankets
+  boardingDorm2: "/images/WhatsApp_Image_2026-07-17_at_10.34.29_(1).jpeg", // bunk-bed dormitory
+  boardingDorm3: "/images/WhatsApp_Image_2026-07-17_at_10.34.29_(2).jpeg", // bunk-bed room 2
+
+  // TRANSPORT page header — full FCPS fleet (yellow van + white minibus + blue car)
+  transport: "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",
+
+  // TRANSPORT individual vehicle images
+  bus1: "/images/WhatsApp_Image_2026-07-17_at_10.39.45.jpeg",   // maroon/cream bus, side
+  bus2: "/images/WhatsApp_Image_2026-07-17_at_10.39.46.jpeg",   // bus, different lighting
+  bus3: "/images/WhatsApp_Image_2026-07-17_at_10.39.46_(1).jpeg",// bus, front-left angle
+  bus4: "/images/WhatsApp_Image_2026-07-17_at_10.39.46_(2).jpeg",// bus, similar to bus1
+  busRear: "/images/WhatsApp_Image_2026-07-17_at_10.39.47.jpeg", // bus rear with FCPS logo
+  bus5: "/images/WhatsApp_Image_2026-07-17_at_10.39.50.jpeg",   // bus, evening light
+  car1: "/images/WhatsApp_Image_2026-07-17_at_10.40.06.jpeg",   // FCPS blue Honda Jazz
+  car2: "/images/WhatsApp_Image_2026-07-17_at_10.40.34.jpeg",   // FCPS blue car front
+  fleet: "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",  // all vehicles together
+
+  // STUDENT LIFE page header — large group at Chahwanda Stadium (sport trip)
+  studentLife: "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",
+
+  // STUDENT LIFE tile images (each tile shows what it's labelled)
+  life1: "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",  // Academics → Form 4 Class building
+  life2: "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",  // Sport → Chahwanda Stadium trip
+  life3: "/images/WhatsApp_Image_2026-07-17_at_10.39.13.jpeg",  // Clubs → learners in formal blazer
+  life4: "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",  // Boarding → actual boarding room
+  life5: "/images/WhatsApp_Image_2026-07-17_at_10.40.00.jpeg",  // Trips → Chinese restaurant outing
+  life6: "/images/WhatsApp_Image_2026-07-17_at_10.39.10.jpeg",  // Community → group at FCPS gate
+
+  // CONTACT page header — school reception (welcoming, flowers, FCPS logo)
+  contact: "/images/WhatsApp_Image_2026-07-17_at_10.40.17_(1).jpeg",
+
+  // HOME MomentsGallery — 20 images that tell the full school story
+  moments: [
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.10.jpeg",   // learners at gate
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",   // stadium trip
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.00.jpeg",   // restaurant outing
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.22.jpeg",   // Form 4 building
+    "/images/WhatsApp_Image_2026-07-17_at_10.34.25.jpeg",   // classroom dusk
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.28.jpeg",   // campus golden hour
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.17.jpeg",   // school gate
+    "/images/WhatsApp_Image_2026-07-17_at_10.34.27.jpeg",   // boarding room
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.45.jpeg",   // FCPS bus
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.33_(1).jpeg",// reception meeting
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.13.jpeg",   // uniform girls
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.37.jpeg",   // winter uniform
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.30.jpeg",   // new building
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.32_(2).jpeg",// campus sunset
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",   // fleet photo
+    "/images/WhatsApp_Image_2026-07-17_at_10.39.47.jpeg",   // bus rear
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.07.jpeg",   // reception "Welcome"
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.17_(1).jpeg",// reception flowers
+    "/images/WhatsApp_Image_2026-07-17_at_10.34.29.jpeg",   // dorm room
+    "/images/WhatsApp_Image_2026-07-17_at_10.40.06.jpeg",   // FCPS car
+  ],
 };
 
 export const homeContent = {

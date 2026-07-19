@@ -2,7 +2,8 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { IMAGES, LANDSCAPE_IMAGES } from "@/lib/image-manifest";
+import { images } from "@/lib/data";
+import { ALL_IMAGES } from "@/lib/image-manifest";
 
 export const metadata = {
   title: "Gallery | First Class Private School",
@@ -10,11 +11,14 @@ export const metadata = {
 };
 
 export default function GalleryPage() {
-  const hero = LANDSCAPE_IMAGES[1];
+  const featured = [
+    images.hero,          // group of learners at FCPS gate
+    images.studentLife,   // large group at Chahwanda stadium
+    images.boarding,      // campus buildings at golden hour
+  ];
 
-  // Build an interesting masonry layout with alternating sizes
-  const featured = IMAGES.slice(0, 3);
-  const rest = IMAGES.slice(3);
+  // Full gallery: all 56 images from the manifest
+  const rest = ALL_IMAGES.filter((src) => !featured.includes(src));
 
   return (
     <>
@@ -22,18 +26,18 @@ export default function GalleryPage() {
         eyebrow="Gallery"
         title="Life at FCPS"
         description="Classrooms, sports fields, boarding houses and community moments — a visual story of First Class Private School."
-        image={hero}
+        image={images.hero}
       />
 
-      {/* Featured strip — 3 large images */}
+      {/* Featured strip — 3 contextual hero images */}
       <section className="bg-white pt-16 pb-4 md:pt-20">
         <Container>
           <div className="grid gap-4 md:grid-cols-3">
-            {featured.map((img, idx) => (
-              <FadeIn key={img.src} delay={idx * 0.06}>
+            {featured.map((src, idx) => (
+              <FadeIn key={src} delay={idx * 0.06}>
                 <div className="group relative aspect-[4/3] overflow-hidden rounded-sm shadow-md">
                   <Image
-                    src={img.src}
+                    src={src}
                     alt={`First Class Private School — featured photograph ${idx + 1}`}
                     fill
                     priority={idx === 0}
@@ -48,18 +52,18 @@ export default function GalleryPage() {
         </Container>
       </section>
 
-      {/* Full masonry grid */}
+      {/* Full masonry grid — all remaining images */}
       <section className="bg-white py-8 pb-20 md:pb-28">
         <Container>
           <div className="columns-2 gap-4 space-y-4 md:columns-3 lg:columns-4">
-            {rest.map((img, idx) => (
-              <FadeIn key={img.src} delay={(idx % 8) * 0.04} className="break-inside-avoid">
+            {rest.map((src, idx) => (
+              <FadeIn key={src} delay={(idx % 8) * 0.04} className="break-inside-avoid">
                 <div className="group relative overflow-hidden rounded-sm shadow-sm">
                   <Image
-                    src={img.src}
+                    src={src}
                     alt={`First Class Private School photograph ${idx + 4}`}
-                    width={img.width}
-                    height={img.height}
+                    width={960}
+                    height={720}
                     loading="lazy"
                     className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"

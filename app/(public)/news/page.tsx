@@ -32,7 +32,7 @@ export default function NewsPage() {
             {newsItems.map((item, idx) => (
               <FadeIn key={item.id} delay={idx * 0.05}>
                 <article className="h-full rounded-sm border border-soft bg-white p-6 shadow-sm">
-                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold">
+                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-burgundy">
                     <Calendar className="h-4 w-4" />
                     {item.category}
                   </div>

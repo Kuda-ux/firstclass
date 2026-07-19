@@ -27,7 +27,7 @@ export function HeadWelcome() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-gold">
+            <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-burgundy">
               Head&apos;s Welcome
             </span>
             <h2 className="font-serif text-3xl text-charcoal md:text-4xl">
@@ -39,7 +39,7 @@ export function HeadWelcome() {
                 &ldquo;{homeContent.head.quote}&rdquo;
               </p>
             </blockquote>
-            <p className="mt-4 text-sm text-gold">
+            <p className="mt-4 text-sm text-muted">
               Draft content — awaiting school confirmation.
             </p>
             <Button as="a" href="/about" variant="outline" className="mt-6">

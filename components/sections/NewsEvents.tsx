@@ -32,7 +32,7 @@ export function NewsEvents() {
                   key={item.id}
                   className="rounded-sm border border-soft bg-white p-5 shadow-sm"
                 >
-                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold">
+                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-burgundy">
                     <span>{item.category}</span>
                     <span className="text-muted">{formatDate(item.date)}</span>
                   </div>
@@ -62,7 +62,7 @@ export function NewsEvents() {
                   key={event.id}
                   className="rounded-sm border border-soft bg-white p-5 shadow-sm"
                 >
-                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold">
+                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-burgundy">
                     <Calendar className="h-4 w-4" />
                     <span>{event.category}</span>
                   </div>

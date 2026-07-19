@@ -18,7 +18,7 @@ export default function TermsPage() {
       <section className="bg-cream py-20 md:py-28">
         <Container>
           <div className="mx-auto max-w-3xl rounded-sm border border-soft bg-white p-8 shadow-sm">
-            <p className="mb-6 rounded-sm bg-gold/10 p-4 text-sm text-gold">
+            <p className="mb-6 rounded-sm bg-gold/10 p-4 text-sm text-charcoal">
               This is a draft for administrator and legal review.
             </p>
             <div>

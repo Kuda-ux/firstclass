@@ -4,10 +4,10 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { homeContent, images, siteSettings } from "@/lib/data";
-import { ALL_IMAGES } from "@/lib/image-manifest";
 
 export function SchoolIntro() {
-  const secondary = ALL_IMAGES[5] ?? images.intro;
+  // Secondary overlap: the school reception with "Welcome to FCPS" banner
+  const secondary = images.aboutGrid5;
   return (
     <section className="bg-cream py-20 md:py-28">
       <Container>
