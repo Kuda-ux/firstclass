@@ -1,16 +1,17 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { homeContent, images } from "@/lib/data";
-import Image from "next/image";
+import { ALL_IMAGES, PORTRAIT_IMAGES } from "@/lib/image-manifest";
 import { Bed, Clock, Shield, Utensils } from "lucide-react";
 
 const features = [
   { title: "Supervised routines", icon: Clock },
   { title: "Safe accommodation", icon: Shield },
   { title: "Meals provided", icon: Utensils },
-  { title: "Study time", icon: Bed },
+  { title: "Dedicated study time", icon: Bed },
 ];
 
 export const metadata = {
@@ -19,6 +20,7 @@ export const metadata = {
 };
 
 export default function BoardingPage() {
+  const portraits = PORTRAIT_IMAGES.slice(0, 4);
   return (
     <>
       <PageHeader
@@ -53,17 +55,63 @@ export default function BoardingPage() {
                 })}
               </div>
             </FadeIn>
+
             <FadeIn delay={0.1}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-sm">
-                <Image
-                  src={images.boarding}
-                  alt="Boarding at First Class Private School"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              {/* Stacked photo collage */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="col-span-2 relative aspect-[16/9] overflow-hidden rounded-sm shadow-md">
+                  <Image
+                    src={images.boarding}
+                    alt="Boarding at First Class Private School"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+                {ALL_IMAGES.slice(21, 23).map((src, idx) => (
+                  <div key={src} className="relative aspect-square overflow-hidden rounded-sm shadow-sm">
+                    <Image
+                      src={src}
+                      alt={`Boarding life at FCPS ${idx + 2}`}
+                      fill
+                      loading="lazy"
+                      className="object-cover"
+                      sizes="25vw"
+                    />
+                  </div>
+                ))}
               </div>
             </FadeIn>
+          </div>
+        </Container>
+      </section>
+
+      {/* Portrait photos of learners */}
+      <section className="bg-white py-16 md:py-20">
+        <Container>
+          <FadeIn>
+            <SectionHeader
+              eyebrow="Our Boarders"
+              title="Faces of the boarding community"
+              align="center"
+              className="mx-auto mb-10 text-center"
+            />
+          </FadeIn>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {portraits.map((src, idx) => (
+              <FadeIn key={src} delay={idx * 0.06}>
+                <div className="group relative aspect-[3/4] overflow-hidden rounded-sm shadow-sm">
+                  <Image
+                    src={src}
+                    alt={`FCPS boarder ${idx + 1}`}
+                    fill
+                    loading="lazy"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                  />
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </Container>
       </section>

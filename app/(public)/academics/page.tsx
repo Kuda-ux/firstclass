@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { academicsContent, images } from "@/lib/data";
+import { ALL_IMAGES } from "@/lib/image-manifest";
 import { BookOpen, Globe, GraduationCap } from "lucide-react";
 
 const icons = [BookOpen, Globe];
@@ -56,6 +58,36 @@ export default function AcademicsPage() {
               </div>
             </div>
           </FadeIn>
+        </Container>
+      </section>
+
+      {/* Classroom life imagery strip */}
+      <section className="bg-white py-16 md:py-20">
+        <Container>
+          <FadeIn>
+            <SectionHeader
+              eyebrow="In the Classroom"
+              title="Learning in action"
+              align="center"
+              className="mx-auto mb-10 text-center"
+            />
+          </FadeIn>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {ALL_IMAGES.slice(30, 38).map((src, idx) => (
+              <FadeIn key={src} delay={idx * 0.04}>
+                <div className="group relative aspect-square overflow-hidden rounded-sm shadow-sm">
+                  <Image
+                    src={src}
+                    alt={`Classroom life at FCPS ${idx + 1}`}
+                    fill
+                    loading="lazy"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                  />
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </Container>
       </section>
     </>

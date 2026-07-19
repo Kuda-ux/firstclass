@@ -4,8 +4,10 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { homeContent, images } from "@/lib/data";
+import { ALL_IMAGES } from "@/lib/image-manifest";
 
 export function BoardingTeaser() {
+  const secondary = ALL_IMAGES[20] ?? images.boarding;
   return (
     <section className="bg-white py-20 md:py-28">
       <Container>
@@ -20,15 +22,32 @@ export function BoardingTeaser() {
               Boarding information
             </Button>
           </FadeIn>
+
           <FadeIn delay={0.1}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-sm">
-              <Image
-                src={images.boarding}
-                alt="Boarding facilities at First Class Private School"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            {/* Overlapping photo pair */}
+            <div className="relative h-72 sm:h-96">
+              <div className="absolute right-0 top-0 w-4/5 overflow-hidden rounded-sm shadow-md">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={images.boarding}
+                    alt="Boarding at First Class Private School"
+                    fill
+                    className="object-cover"
+                    sizes="50vw"
+                  />
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-0 w-2/5 overflow-hidden rounded-sm shadow-lg border-4 border-white">
+                <div className="relative aspect-square">
+                  <Image
+                    src={secondary}
+                    alt="Boarding community life"
+                    fill
+                    className="object-cover"
+                    sizes="25vw"
+                  />
+                </div>
+              </div>
             </div>
           </FadeIn>
         </div>
