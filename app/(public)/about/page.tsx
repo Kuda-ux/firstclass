@@ -46,7 +46,7 @@ export default function AboutPage() {
               />
               <p className="mt-4 leading-relaxed text-muted">
                 Registered with the Ministry of Primary and Secondary Education, First Class Private School is a
-                Christian-centred day and boarding secondary school serving Mbizo and surrounding communities.
+                Christian-centred day and boarding secondary school serving learners from Kwekwe and surrounding areas.
                 Our motto <strong className="text-charcoal">Non Ducor, Duco</strong> — I am not led, I lead —
                 runs through everything we do.
               </p>

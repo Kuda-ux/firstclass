@@ -5,7 +5,7 @@ insert into public.site_settings (key, value) values
   ('school_name', 'First Class Private School'),
   ('abbreviation', 'FCPS'),
   ('motto', 'Non Ducor, Duco'),
-  ('address', '8514/11 Mbizo, Kwekwe, Zimbabwe'),
+  ('address', '8514/11 Kwekwe, Zimbabwe'),
   ('phone_primary', '+263 773 870 090'),
   ('phone_secondary', '+263 713 687 669'),
   ('email', 'info@firstclassprivate.ac.zw'),

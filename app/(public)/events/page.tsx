@@ -39,26 +39,35 @@ export default function EventsPage() {
               className="mb-10"
             />
           </FadeIn>
-          <div className="flex flex-col gap-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {upcomingEvents.map((event, idx) => (
               <FadeIn key={event.id} delay={idx * 0.05}>
-                <article className="rounded-sm border border-soft bg-white p-6 shadow-sm">
-                  <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
-                    <div>
-                      <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1 text-xs font-semibold uppercase tracking-wider text-burgundy">
-                        <Calendar className="h-3.5 w-3.5" />
-                        {event.category}
-                      </div>
-                      <h2 className="mt-3 font-serif text-2xl text-charcoal">{event.title}</h2>
+                <article className="group h-full overflow-hidden rounded-sm border border-soft bg-white shadow-sm">
+                  {event.image && (
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                     </div>
-                    <div className="text-sm text-muted md:text-right">
-                      <p className="flex items-center gap-2 md:justify-end">
+                  )}
+                  <div className="p-6">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1 text-xs font-semibold uppercase tracking-wider text-burgundy">
+                      <Calendar className="h-3.5 w-3.5" />
+                      {event.category}
+                    </div>
+                    <h2 className="mt-3 font-serif text-2xl text-charcoal">{event.title}</h2>
+                    <div className="mt-3 text-sm text-muted">
+                      <p className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-gold" />
                         {formatDate(event.startDate)}
-                        {event.endDate !== event.startDate && ` \u2013 ${formatDate(event.endDate)}`}
+                        {event.endDate !== event.startDate && ` – ${formatDate(event.endDate)}`}
                         , {event.time}
                       </p>
-                      <p className="mt-1 flex items-center gap-2 md:justify-end">
+                      <p className="mt-1 flex items-center gap-2">
                         <MapPin className="h-4 w-4 text-gold" />
                         {event.location}
                       </p>

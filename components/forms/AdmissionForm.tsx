@@ -183,7 +183,7 @@ export function AdmissionForm() {
           </div>
           <div>
             <Label htmlFor="residentialArea">Residential area</Label>
-            <Input id="residentialArea" {...register("residentialArea")} placeholder="e.g. Mbizo" />
+            <Input id="residentialArea" {...register("residentialArea")} placeholder="e.g. Kwekwe" />
             {errors.residentialArea && (
               <p className="mt-1 text-xs text-red-600">{errors.residentialArea.message}</p>
             )}

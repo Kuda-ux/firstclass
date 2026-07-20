@@ -4,8 +4,8 @@ export const siteSettings = {
   name: "First Class Private School",
   abbreviation: "FCPS",
   motto: "Non Ducor, Duco",
-  tagline: "Building Tomorrow's Christian Leaders from Mbizo",
-  address: "Stand 8514 / 11, Mbizo, Kwekwe, Zimbabwe",
+  tagline: "Building Tomorrow's Christian Leaders from Kwekwe",
+  address: "Stand 8514 / 11, Kwekwe, Zimbabwe",
   phones: ["+263 77 387 0090", "+263 71 368 7669"],
   email: "firstclassprivateschool26@gmail.com",
   whatsapp: "+263 77 387 0090",
@@ -20,7 +20,7 @@ export const siteSettings = {
     saturday: "08:00 – 12:00",
   },
   mapEmbedUrl:
-    "https://www.google.com/maps?q=Stand+8514+Mbizo+Kwekwe+Zimbabwe&output=embed",
+    "https://www.google.com/maps?q=Stand+8514+Kwekwe+Zimbabwe&output=embed",
   bank: {
     name: "Banc ABC",
     branch: "Kwekwe",
@@ -108,6 +108,14 @@ export const images = {
   // CONTACT page header — school reception (welcoming, flowers, FCPS logo)
   contact: "/images/WhatsApp_Image_2026-07-17_at_10.40.17_(1).jpeg",
 
+  // ABOUT page — official school posters displayed in the school
+  requirementsFlyer: "/images/WhatsApp_Image_2026-07-18_at_07.45.22.jpeg",     // 2027 Requirements flyer
+  coreValuesPoster: "/images/WhatsApp_Image_2026-07-19_at_14.03.32.jpeg",      // Core Values with Shona
+  visionMissionPoster: "/images/WhatsApp_Image_2026-07-19_at_14.03.33.jpeg",   // Vision/Mission/Mandate poster
+  ministryPoster: "/images/WhatsApp_Image_2026-07-19_at_14.03.33_(1).jpeg",    // Ministry of Education poster
+  coreValuesSimple: "/images/WhatsApp_Image_2026-07-19_at_14.03.33_(2).jpeg",  // Core Values simple poster
+  subjectsPoster: "/images/WhatsApp_Image_2026-07-19_at_14.03.33_(3).jpeg",    // Subjects Offered poster
+
   // HOME MomentsGallery — 20 images that tell the full school story
   moments: [
     "/images/WhatsApp_Image_2026-07-17_at_10.39.10.jpeg",    // learners at gate
@@ -137,15 +145,15 @@ export const images = {
 
 export const homeContent = {
   hero: {
-    headline: "Building Tomorrow's Christian Leaders from Mbizo",
+    headline: "Building Tomorrow's Christian Leaders from Kwekwe",
     subhead:
       "First Class Private School offers Forms 1\u20136 ZIMSEC and Cambridge education in a Christian-centred environment that develops academically excellent, morally upright and practically skilled learners for Zimbabwe and beyond.",
   },
   intro: {
-    title: "A Christian-centred school rooted in Mbizo, open to all",
+    title: "A Christian-centred school rooted in Kwekwe, open to all",
     body: [
       "At First Class Private School our motto Non Ducor, Duco \u2014 I am not led, I lead \u2014 captures our ambition for every learner. We combine rigorous academics with Christian values, Unhu/Ubuntu and practical skills, producing graduates who are competitive, innovative and committed to community development.",
-      "We serve learners from Mbizo and surrounding communities, offering inclusive and affordable day and boarding education from Form 1 through Form 6. All communication should be addressed to the Principal.",
+      "Serving learners from Kwekwe and surrounding areas, we offer inclusive and affordable day and boarding education from Form 1 through Form 6. All communication should be addressed to the Principal.",
     ],
   },
   whyChoose: [
@@ -167,7 +175,7 @@ export const homeContent = {
     {
       title: "Day & boarding",
       description:
-        "Flexible enrolment for families across Mbizo and surrounding communities \u2014 day or full boarding available.",
+        "Flexible enrolment for families from Kwekwe and surrounding areas \u2014 day or full boarding available.",
     },
     {
       title: "Holistic development",
@@ -177,7 +185,7 @@ export const homeContent = {
     {
       title: "Affordable & accessible",
       description:
-        "Quality private education at fees designed to be accessible to families in Mbizo and nearby areas.",
+        "Quality private education at fees designed to be accessible to families in Kwekwe and surrounding areas.",
     },
   ],
   head: {
@@ -192,7 +200,7 @@ export const homeContent = {
   },
   cta: {
     title: "Enrol your child at First Class Private School",
-    body: "Join a school committed to academic excellence, Christian values and community development. We welcome families from Mbizo and surrounding areas for Forms 1\u20136.",
+    body: "Join a school committed to academic excellence, Christian values and community development. We welcome families from Kwekwe and surrounding areas for Forms 1\u20136.",
   },
 };
 
@@ -201,27 +209,48 @@ export const homeContent = {
 export const newsItems = [
   {
     id: "1",
-    slug: "athletics-day",
-    title: "Athletics Day 2026",
-    excerpt: "Our annual athletics day brings the whole school together for track and field events.",
-    date: "2026-07-25",
-    category: "Sport",
+    slug: "chinhoyi-caves-trip",
+    title: "Educational Trip to Chinhoyi Caves",
+    excerpt: "Learners explored the famous Chinhoyi Caves Recreational Park, learning about geology, ecology and Zimbabwe's natural heritage. The trip included a braai and team-building activities.",
+    date: "2026-07-18",
+    category: "Trip",
+    image: "/images/WhatsApp_Image_2026-07-19_at_15.38.59.jpeg",
   },
   {
     id: "2",
-    slug: "valentines-kindness",
-    title: "Valentine's Kindness Activity",
-    excerpt: "Learners took part in a kindness campaign supporting the local community.",
-    date: "2026-02-14",
-    category: "Community",
+    slug: "rhodes-tower-visit",
+    title: "Rhodes Tower Educational Visit",
+    excerpt: "Form 3 and 4 learners visited Rhodes Tower in Kwekwe CBD to learn about local history and architecture. The outing combined heritage studies with practical geography.",
+    date: "2026-07-15",
+    category: "Trip",
+    image: "/images/WhatsApp_Image_2026-07-19_at_15.38.47.jpeg",
   },
   {
     id: "3",
-    slug: "term-calendar",
-    title: "Term Calendar Released",
-    excerpt: "Important dates for the new term are now available for parents.",
-    date: "2026-01-08",
-    category: "Notice",
+    slug: "school-prayer-day",
+    title: "School Prayer Day Campaign",
+    excerpt: "Parents and guardians joined us for a day of prayer and fasting on 15 July 2026. Theme: Building First Class Private School with God, Our Strong Foundation.",
+    date: "2026-07-15",
+    category: "Spiritual",
+    image: "/images/WhatsApp_Image_2026-07-19_at_15.39.14.jpeg",
+  },
+  {
+    id: "4",
+    slug: "stadium-visit",
+    title: "Chahwanda Stadium Sports Day",
+    excerpt: "Learners visited Chahwanda Stadium for an inter-schools athletics competition, showcasing talent in track and field events.",
+    date: "2026-07-10",
+    category: "Sport",
+    image: "/images/WhatsApp_Image_2026-07-19_at_15.38.55.jpeg",
+  },
+  {
+    id: "5",
+    slug: "staff-development",
+    title: "Staff Development Workshop",
+    excerpt: "Our dedicated teaching staff attended a professional development workshop to enhance teaching methods and curriculum delivery.",
+    date: "2026-07-08",
+    category: "Staff",
+    image: "/images/WhatsApp_Image_2026-07-19_at_15.38.54.jpeg",
   },
 ];
 
@@ -229,35 +258,38 @@ export const upcomingEvents = [
   {
     id: "1",
     slug: "open-day",
-    title: "Open Day",
+    title: "Open Day 2026",
     startDate: "2026-08-05",
     endDate: "2026-08-05",
     time: "09:00 \u2013 13:00",
     location: "FCPS Main Campus",
     category: "Open day",
     featured: true,
+    image: "/images/WhatsApp_Image_2026-07-17_at_10.40.17.jpeg",
   },
   {
     id: "2",
     slug: "civics-day",
-    title: "Civics Day",
+    title: "Civics Day Celebrations",
     startDate: "2026-08-15",
     endDate: "2026-08-15",
     time: "08:00 \u2013 14:00",
     location: "School Grounds",
     category: "Culture",
     featured: false,
+    image: "/images/WhatsApp_Image_2026-07-19_at_15.38.58.jpeg",
   },
   {
     id: "3",
-    slug: "educational-trip",
-    title: "Educational Trip",
+    slug: "educational-trip-bulawayo",
+    title: "Educational Trip to Bulawayo",
     startDate: "2026-09-02",
     endDate: "2026-09-04",
     time: "All day",
     location: "Bulawayo",
     category: "Trip",
     featured: false,
+    image: "/images/WhatsApp_Image_2026-07-19_at_15.39.07.jpeg",
   },
 ];
 
@@ -278,16 +310,16 @@ export const downloads = [
 
 export const aboutContent = {
   intro:
-    "First Class Private School is a Christian-centred private day and boarding school in Mbizo, Kwekwe, Zimbabwe. Registered with the Ministry of Primary and Secondary Education, we offer Forms 1\u20136 through ZIMSEC and Cambridge curricula.",
+    "First Class Private School is a Christian-centred private day and boarding school in Kwekwe, Zimbabwe, serving learners from Kwekwe and surrounding areas. Registered with the Ministry of Primary and Secondary Education, we offer Forms 1\u20136 through ZIMSEC and Cambridge curricula.",
 
   vision:
     "To be the leading provider of quality Christ-centred secondary education in Kwekwe, developing well-rounded, academically excellent, and morally upright citizens who are competitive, innovative, self-reliant and embody Christian values alongside Unhu/Ubuntu while contributing meaningfully to community development.",
 
   mission:
-    "To promote and facilitate the provision of high quality, inclusive and affordable secondary education (Form 1\u20136) that is accessible to students from Mbizo and surrounding communities, fostering academic excellence, character development, and practical skills for national development.",
+    "To promote and facilitate the provision of high quality, inclusive and affordable secondary education (Form 1\u20136) that is accessible to students from Kwekwe and surrounding areas, fostering academic excellence, character development, and practical skills for national development.",
 
   mandate:
-    "To provide comprehensive Christ-centred secondary education that bridges the gap between primary and tertiary education for students in Mbizo high density suburb and surrounding areas. We are committed to delivering accessible, quality education grounded in Christian values that empowers students to participate actively in Zimbabwe\u2019s socio-economic transformation while maintaining strong community roots and Biblical principles.",
+    "To provide comprehensive Christ-centred secondary education that bridges the gap between primary and tertiary education for students in Kwekwe and surrounding areas. We are committed to delivering accessible, quality education grounded in Christian values that empowers students to participate actively in Zimbabwe\u2019s socio-economic transformation while maintaining strong community roots and Biblical principles.",
 
   values: [
     {
@@ -332,7 +364,7 @@ export const aboutContent = {
     { title: "Academic Excellence",              description: "Rigorous teaching, regular assessment and continuous improvement towards national and international standards." },
     { title: "Spiritual Development",            description: "Christian values and Biblical principles integrated into school life, assemblies and pastoral care." },
     { title: "Character Development",            description: "Building integrity, resilience, discipline and leadership in every learner." },
-    { title: "Community Integration",            description: "Active participation in Mbizo and the wider Kwekwe community through service and outreach." },
+    { title: "Community Integration",            description: "Active participation in Kwekwe and surrounding areas through service and outreach." },
     { title: "Practical Skills Development",     description: "Hands-on learning in Agriculture, Computers, Textile and Design and other practical subjects." },
     { title: "Cultural & Spiritual Integration", description: "Honouring Zimbabwean culture, Unhu/Ubuntu and Christian heritage alongside academic achievement." },
   ],
@@ -343,7 +375,7 @@ export const aboutContent = {
 export const academicsContent = {
   title: "Academic Pathways",
   intro:
-    "FCPS offers both ZIMSEC and Cambridge curricula for Forms 1\u20136. Our 15 subjects cover languages, humanities, commercial education, sciences, technology and practical skills.",
+    "FCPS offers both ZIMSEC and Cambridge curricula for Forms 1\u20136. Our 17 subjects cover languages, humanities, commercial education, sciences, technology, practical skills and life skills.",
 
   pathways: [
     {
@@ -358,7 +390,7 @@ export const academicsContent = {
     },
   ],
 
-  // 15 officially listed subjects grouped by department
+  // 17 officially listed subjects grouped by department
   subjectGroups: [
     {
       category: "Languages & Humanities",
@@ -366,7 +398,7 @@ export const academicsContent = {
     },
     {
       category: "Commercial",
-      subjects: ["Commerce", "Accounts"],
+      subjects: ["Commerce", "Accounts", "Business Enterprise Skills"],
     },
     {
       category: "Mathematics & Sciences",
@@ -375,6 +407,10 @@ export const academicsContent = {
     {
       category: "Technology & Practical",
       subjects: ["Computers", "Textile and Design", "Agriculture"],
+    },
+    {
+      category: "Life Skills",
+      subjects: ["Guidance and Counselling"],
     },
   ],
 
@@ -386,7 +422,7 @@ export const academicsContent = {
 
 export const admissionsContent = {
   intro:
-    "First Class Private School welcomes learners from Mbizo and surrounding communities for Forms 1\u20136. The information below is for the 2027 intake. All communication should be addressed to the Principal.",
+    "First Class Private School welcomes learners from Kwekwe and surrounding areas for Forms 1\u20136. The information below is for the 2027 intake. All communication should be addressed to the Principal.",
 
   // Fee schedule (2027 — USD)
   fees: {
@@ -398,12 +434,13 @@ export const admissionsContent = {
       { label: "Uniforms \u2014 Boarders",     amount: 200, note: "Also covers Student ID & Cover Pages" },
       { label: "Computer & Science Levy",   amount: 20,  note: "" },
       { label: "Report Book",               amount: 10,  note: "" },
+      { label: "Sports Fee",              amount: 10,  note: "" },
       { label: "Fees \u2014 Day Students",     amount: 300, note: "Per term" },
       { label: "Fees \u2014 Boarding Students",amount: 800, note: "Per term" },
     ],
     firstTermTotals: {
-      dayStudent:      600,
-      boardingStudent: 1140,
+      dayStudent:      610,
+      boardingStudent: 1150,
     },
   },
 

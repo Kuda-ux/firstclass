@@ -42,14 +42,27 @@ export default function NewsPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {newsItems.map((item, idx) => (
               <FadeIn key={item.id} delay={idx * 0.05}>
-                <article className="h-full rounded-sm border border-soft bg-white p-6 shadow-sm">
-                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-burgundy">
-                    <Calendar className="h-4 w-4" />
-                    {item.category}
+                <article className="group h-full overflow-hidden rounded-sm border border-soft bg-white shadow-sm">
+                  {item.image && (
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-burgundy">
+                      <Calendar className="h-4 w-4" />
+                      {item.category}
+                    </div>
+                    <h2 className="mt-3 font-serif text-2xl text-charcoal">{item.title}</h2>
+                    <p className="mt-2 text-sm text-muted">{formatDate(item.date)}</p>
+                    <p className="mt-4 text-muted">{item.excerpt}</p>
                   </div>
-                  <h2 className="mt-3 font-serif text-2xl text-charcoal">{item.title}</h2>
-                  <p className="mt-2 text-sm text-muted">{formatDate(item.date)}</p>
-                  <p className="mt-4 text-muted">{item.excerpt}</p>
                 </article>
               </FadeIn>
             ))}
