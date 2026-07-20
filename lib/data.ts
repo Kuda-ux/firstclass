@@ -16,7 +16,7 @@ export const siteSettings = {
   registration: "Registered With The Ministry Of Primary And Secondary Education",
   classSize: "Approximately 25 learners per class",
   officeHours: {
-    weekday: "07:30 – 16:00",
+    weekday: "07:00 – 17:00",
     saturday: "08:00 – 12:00",
   },
   mapEmbedUrl:
