@@ -11,9 +11,9 @@ import { AdmissionsCta } from "@/components/sections/AdmissionsCta";
 import { ContactMap } from "@/components/sections/ContactMap";
 
 export const metadata = {
-  title: "First Class Private School | ZIMSEC and Cambridge School in Kwekwe",
+  title: "First Class Private School | Building Tomorrow's Christian Leaders from Mbizo",
   description:
-    "First Class Private School provides ZIMSEC and Cambridge education in a disciplined, caring and ambitious environment for day and boarding learners.",
+    "First Class Private School (FCPS) is a Christ-centred private day and boarding school in Mbizo, Kwekwe, Zimbabwe. We offer Forms 1–6 ZIMSEC and Cambridge education grounded in Christian values, Unhu/Ubuntu and practical skills.",
 };
 
 export default function HomePage() {

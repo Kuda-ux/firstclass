@@ -18,24 +18,29 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://firstclassprivate.ac.zw"),
-  title: "First Class Private School | ZIMSEC and Cambridge School in Kwekwe",
+  title: "First Class Private School | Building Tomorrow's Christian Leaders from Mbizo",
   description:
-    "First Class Private School (FCPS) offers ZIMSEC and Cambridge education in a disciplined, caring and ambitious environment for day and boarding learners in Kwekwe, Zimbabwe.",
+    "First Class Private School (FCPS) is a Christ-centred private day and boarding school in Mbizo, Kwekwe, Zimbabwe. We offer inclusive, affordable Forms 1–6 ZIMSEC and Cambridge education grounded in Christian values, Unhu/Ubuntu and practical skills.",
   keywords: [
     "First Class Private School",
     "FCPS",
     "Kwekwe",
+    "Mbizo",
     "Zimbabwe",
     "ZIMSEC",
     "Cambridge",
+    "Christian school",
     "private school",
-    "boarding",
+    "secondary school",
+    "Forms 1-6",
+    "boarding school",
     "day school",
+    "Non Ducor Duco",
   ],
   openGraph: {
-    title: "First Class Private School | ZIMSEC and Cambridge School in Kwekwe",
+    title: "First Class Private School | Building Tomorrow's Christian Leaders from Mbizo",
     description:
-      "A disciplined, caring and ambitious school community in Kwekwe, Zimbabwe.",
+      "A Christ-centred private day and boarding secondary school in Mbizo, Kwekwe, Zimbabwe — offering ZIMSEC and Cambridge education for Forms 1–6.",
     type: "website",
     locale: "en_ZW",
     url: "https://firstclassprivate.ac.zw",
@@ -43,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "First Class Private School | ZIMSEC and Cambridge School in Kwekwe",
+    title: "First Class Private School | Building Tomorrow's Christian Leaders from Mbizo",
     description:
-      "A disciplined, caring and ambitious school community in Kwekwe, Zimbabwe.",
+      "A Christ-centred private day and boarding secondary school in Mbizo, Kwekwe, Zimbabwe.",
     images: ["/og-image.jpg"],
   },
   alternates: {

@@ -39,11 +39,8 @@ export function HeadWelcome() {
                 &ldquo;{homeContent.head.quote}&rdquo;
               </p>
             </blockquote>
-            <p className="mt-4 text-sm text-muted">
-              Draft content — awaiting school confirmation.
-            </p>
             <Button as="a" href="/about" variant="outline" className="mt-6">
-              Read the full welcome
+              Read more about FCPS
             </Button>
           </FadeIn>
         </div>

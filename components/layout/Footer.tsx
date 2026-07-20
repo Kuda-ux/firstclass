@@ -1,20 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { Phone, MapPin, Mail } from "lucide-react";
+import { Phone, MapPin, Mail, Clock } from "lucide-react";
+import { siteSettings } from "@/lib/data";
 
 const footerLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "Academics", href: "/academics" },
-  { label: "Admissions", href: "/admissions" },
-  { label: "Boarding", href: "/boarding" },
-  { label: "News & Events", href: "/news" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Downloads", href: "/downloads" },
-  { label: "Transport", href: "/transport" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Us",       href: "/about" },
+  { label: "Academics",      href: "/academics" },
+  { label: "Admissions",     href: "/admissions" },
+  { label: "Boarding",       href: "/boarding" },
+  { label: "News & Events",  href: "/news" },
+  { label: "Gallery",        href: "/gallery" },
+  { label: "Downloads",      href: "/downloads" },
+  { label: "Transport",      href: "/transport" },
+  { label: "Contact",        href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Use", href: "/terms" },
+  { label: "Terms of Use",   href: "/terms" },
 ];
 
 export function Footer() {
@@ -22,6 +23,7 @@ export function Footer() {
     <footer className="mt-auto bg-charcoal text-white">
       <Container>
         <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
               <Image
@@ -40,42 +42,49 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-white/70">
-              Non Ducor, Duco — I am not led, I lead.
+            <p className="mt-4 text-sm italic leading-relaxed text-white/70">
+              {siteSettings.motto} &mdash; I am not led, I lead.
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-white/50">
+              {siteSettings.tagline}
+            </p>
+            <p className="mt-3 text-xs leading-relaxed text-white/40">
+              {siteSettings.registration}
             </p>
           </div>
 
+          {/* Contact */}
           <div>
             <h3 className="mb-4 font-serif text-lg text-gold">Contact</h3>
             <ul className="space-y-3 text-sm text-white/80">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                8514/11 Mbizo, Kwekwe, Zimbabwe
+                {siteSettings.address}
               </li>
+              {siteSettings.phones.map((phone) => (
+                <li key={phone} className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 shrink-0 text-gold" />
+                  <a
+                    href={`tel:${phone.replace(/\s/g, "")}`}
+                    className="hover:text-white"
+                  >
+                    {phone}
+                  </a>
+                </li>
+              ))}
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-gold" />
-                <a href="tel:+263773870090" className="hover:text-white">
-                  +263 773 870 090
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-gold" />
-                <a href="tel:+263713687669" className="hover:text-white">
-                  +263 713 687 669
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-gold" />
+                <Mail className="h-4 w-4 shrink-0 text-gold" />
                 <a
-                  href="mailto:info@firstclassprivate.ac.zw"
-                  className="hover:text-white"
+                  href={`mailto:${siteSettings.email}`}
+                  className="break-all hover:text-white"
                 >
-                  info@firstclassprivate.ac.zw
+                  {siteSettings.email}
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Quick links */}
           <div>
             <h3 className="mb-4 font-serif text-lg text-gold">Quick Links</h3>
             <ul className="grid grid-cols-2 gap-2 text-sm text-white/80">
@@ -89,24 +98,33 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Office hours */}
           <div>
             <h3 className="mb-4 font-serif text-lg text-gold">Office Hours</h3>
-            <p className="text-sm leading-relaxed text-white/70">
-              Monday – Friday
-              <br />
-              <span className="text-white/90">07:30 – 16:00</span>
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-white/70">
-              Saturday
-              <br />
-              <span className="text-white/90">08:00 – 12:00</span>
+            <ul className="space-y-3 text-sm text-white/70">
+              <li className="flex items-start gap-2">
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <div>
+                  <span className="block text-white/50">Monday &ndash; Friday</span>
+                  <span className="text-white/90">{siteSettings.officeHours.weekday}</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <div>
+                  <span className="block text-white/50">Saturday</span>
+                  <span className="text-white/90">{siteSettings.officeHours.saturday}</span>
+                </div>
+              </li>
+            </ul>
+            <p className="mt-4 text-xs text-white/40">
+              All communication to be addressed to the Principal.
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/10 py-6 text-center text-sm text-white/60">
-          &copy; {new Date().getFullYear()} First Class Private School. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} First Class Private School. All rights reserved.
         </div>
       </Container>
     </footer>

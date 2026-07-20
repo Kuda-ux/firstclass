@@ -40,8 +40,9 @@ export const images = {
   // HOME SchoolIntro — school reception with FCPS logo on the counter, flowers
   intro: "/images/WhatsApp_Image_2026-07-17_at_10.40.17_(1).jpeg",
 
-  // HOME HeadWelcome — two men in suits shaking hands at the FCPS reception
-  head: "/images/WhatsApp_Image_2026-07-17_at_10.40.33_(1).jpeg",
+  // HOME HeadWelcome — Principal Mrs Sibanda G
+  head: "/images/mrs-sibanda-g-principal.jpeg",
+  principal2: "/images/mrs-sibanda-g-principal-2.jpeg",
 
   // ABOUT page header — school main entrance gate with FCPS billboard and flags
   aboutHeader: "/images/WhatsApp_Image_2026-07-17_at_10.40.17.jpeg",
@@ -180,7 +181,7 @@ export const homeContent = {
     },
   ],
   head: {
-    name: "Head of School",
+    name: "Mrs Sibanda G",
     title: "Principal, First Class Private School",
     quote:
       "Our vision is to be the leading provider of quality Christ-centred secondary education in Kwekwe \u2014 developing well-rounded, academically excellent and morally upright citizens who contribute meaningfully to their communities.",
@@ -512,3 +513,38 @@ Intellectual property including the school name, logo and photographs belongs to
 
 The school reserves the right to update this website and these terms at any time.
 `;
+
+// ─── News & Events posters (direct image gallery) ─────────────────────────────
+// NOTE: These images were provided as event/news posters. Without OCR they cannot
+// be read automatically, so each page renders them as a gallery of the originals.
+// Adjust the split by moving paths between the two arrays once the content of each
+// poster has been reviewed.
+
+export const newsImages = [
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.47.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.48_(1).jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.48.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.52_(1).jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.52_(2).jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.52_(3).jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.52.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.54.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.55.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.58_(1).jpeg",
+];
+
+export const eventsImages = [
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.58_(2).jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.58.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.38.59.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.00.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.07.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.10.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.12_(1).jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.12.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.13_(1).jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.13.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.14.jpeg",
+  "/images/WhatsApp_Image_2026-07-19_at_15.39.15.jpeg",
+];
+

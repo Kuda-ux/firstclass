@@ -4,22 +4,22 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { TransportForm } from "@/components/forms/TransportForm";
-import { images, transportContent } from "@/lib/data";
+import { images, transportContent, siteSettings } from "@/lib/data";
 import { Bus, Info, Phone } from "lucide-react";
 
 export const metadata = {
   title: "Transport & Bus Hire | First Class Private School",
-  description: "School transport and bus hire information for First Class Private School.",
+  description: "School transport and bus hire information for First Class Private School, Kwekwe.",
 };
 
 // Vehicle images that show the actual FCPS fleet and buses
 const vehicleGallery = [
-  { src: images.bus1, alt: "FCPS school bus — side view" },
-  { src: images.bus2, alt: "FCPS school bus — different angle" },
-  { src: images.bus3, alt: "FCPS school bus — front-left" },
+  { src: images.bus1,    alt: "FCPS school bus — side view" },
+  { src: images.bus2,    alt: "FCPS school bus — different angle" },
+  { src: images.bus3,    alt: "FCPS school bus — front-left" },
   { src: images.busRear, alt: "FCPS bus rear showing school motto" },
-  { src: images.bus5, alt: "FCPS bus at dusk" },
-  { src: images.car1, alt: "FCPS branded school car" },
+  { src: images.bus5,    alt: "FCPS bus at dusk" },
+  { src: images.car1,    alt: "FCPS branded school car" },
 ];
 
 export default function TransportPage() {
@@ -54,11 +54,11 @@ export default function TransportPage() {
                 <p className="text-sm text-muted">{transportContent.note}</p>
               </div>
               <a
-                href="tel:+263773870090"
+                href={`tel:${siteSettings.phones[0].replace(/\s/g, "")}`}
                 className="mt-6 inline-flex items-center gap-2 font-medium text-burgundy hover:underline"
               >
                 <Phone className="h-4 w-4" />
-                +263 773 870 090
+                {siteSettings.phones[0]}
               </a>
             </FadeIn>
             <FadeIn delay={0.1}>

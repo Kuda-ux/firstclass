@@ -7,30 +7,32 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { Menu, X, Phone, MapPin, Mail } from "lucide-react";
+import { siteSettings } from "@/lib/data";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  {
-    label: "About",
-    href: "/about",
-  },
-  { label: "Academics", href: "/academics" },
-  { label: "Admissions", href: "/admissions" },
-  { label: "Boarding", href: "/boarding" },
-  { label: "Student Life", href: "/student-life" },
+  { label: "Home",          href: "/" },
+  { label: "About",         href: "/about" },
+  { label: "Academics",     href: "/academics" },
+  { label: "Admissions",    href: "/admissions" },
+  { label: "Boarding",      href: "/boarding" },
+  { label: "Student Life",  href: "/student-life" },
   { label: "News & Events", href: "/news" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Downloads", href: "/downloads" },
-  { label: "Transport", href: "/transport" },
-  { label: "Contact", href: "/contact" },
+  { label: "Gallery",       href: "/gallery" },
+  { label: "Downloads",     href: "/downloads" },
+  { label: "Transport",     href: "/transport" },
+  { label: "Contact",       href: "/contact" },
 ];
 
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Primary phone (first in the list)
+  const primaryPhone = siteSettings.phones[0];
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
+      {/* Top bar */}
       <div className="bg-burgundy text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between px-5 py-2 text-xs md:text-sm">
           <div className="flex items-center gap-4">
@@ -39,20 +41,20 @@ export function Header() {
               Kwekwe, Zimbabwe
             </span>
             <a
-              href="tel:+263773870090"
+              href={`tel:${primaryPhone.replace(/\s/g, "")}`}
               className="flex items-center gap-1.5 hover:text-gold"
             >
               <Phone className="h-3.5 w-3.5 text-gold" />
-              +263 773 870 090
+              {primaryPhone}
             </a>
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="mailto:info@firstclassprivate.ac.zw"
+              href={`mailto:${siteSettings.email}`}
               className="hidden items-center gap-1.5 hover:text-gold md:flex"
             >
               <Mail className="h-3.5 w-3.5 text-gold" />
-              info@firstclassprivate.ac.zw
+              {siteSettings.email}
             </a>
             <Link
               href="/admissions"
@@ -64,6 +66,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Main nav */}
       <div className="mx-auto max-w-7xl px-5">
         <div className="flex h-20 items-center justify-between lg:h-24">
           <Link href="/" className="flex items-center gap-3">
@@ -133,6 +136,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Mobile drawer */}
       {mobileOpen && (
         <div className="border-t border-soft lg:hidden">
           <nav className="mx-auto max-w-7xl px-5 py-4">
