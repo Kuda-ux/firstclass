@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { newsItems, upcomingEvents } from "@/lib/data";
-import { Calendar, MapPin, Clock } from "lucide-react";
+import { newsItems, allEvents } from "@/lib/data";
+import { Calendar, MapPin, Clock, Star } from "lucide-react";
 
 function formatDate(dateString: string) {
   const date = new Date(dateString);
@@ -16,6 +17,9 @@ function formatDate(dateString: string) {
 }
 
 export function NewsEvents() {
+  const upcoming = allEvents.filter((event) => !event.featured);
+  const featured = allEvents.filter((event) => event.featured);
+
   return (
     <section className="bg-cream py-20 md:py-28">
       <Container>
@@ -57,7 +61,54 @@ export function NewsEvents() {
               className="mb-8"
             />
             <div className="flex flex-col gap-4">
-              {upcomingEvents.map((event) => (
+              {featured.map((event) => (
+                <article
+                  key={event.id}
+                  className="relative overflow-hidden rounded-sm border-2 border-gold bg-white shadow-sm"
+                >
+                  {event.image && (
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                      <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-gold px-2.5 py-1 text-xs font-bold text-white">
+                        <Star className="h-3 w-3" />
+                        Featured
+                      </div>
+                    </div>
+                  )}
+                  <div className="p-5">
+                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-burgundy">
+                      <Calendar className="h-4 w-4" />
+                      <span>{event.category}</span>
+                    </div>
+                    <h3 className="mt-2 font-serif text-xl text-charcoal">
+                      <Link href={`/events/${event.slug}`} className="hover:text-burgundy">
+                        {event.title}
+                      </Link>
+                    </h3>
+                    <div className="mt-3 space-y-1 text-sm text-muted">
+                      <p className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-gold" />
+                        {formatDate(event.startDate)}
+                        {event.endDate !== event.startDate && ` – ${formatDate(event.endDate)}`}, {event.time}
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-gold" />
+                        {event.location}
+                      </p>
+                    </div>
+                    <Button as="a" href={`/events/${event.slug}`} size="sm" className="mt-4">
+                      View details
+                    </Button>
+                  </div>
+                </article>
+              ))}
+              {upcoming.map((event) => (
                 <article
                   key={event.id}
                   className="rounded-sm border border-soft bg-white p-5 shadow-sm"
@@ -67,7 +118,9 @@ export function NewsEvents() {
                     <span>{event.category}</span>
                   </div>
                   <h3 className="mt-2 font-serif text-xl text-charcoal">
-                    {event.title}
+                    <Link href={`/events/${event.slug}`} className="hover:text-burgundy">
+                      {event.title}
+                    </Link>
                   </h3>
                   <div className="mt-3 space-y-1 text-sm text-muted">
                     <p className="flex items-center gap-2">

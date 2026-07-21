@@ -108,6 +108,9 @@ export const images = {
   // CONTACT page header — school reception (welcoming, flowers, FCPS logo)
   contact: "/images/WhatsApp_Image_2026-07-17_at_10.40.17_(1).jpeg",
 
+  // NEWS & EVENTS — Form 1 Entrance Test 2027 flyer
+  entranceTestFlyer: "/images/WhatsApp_Image_2026-07-20_at_18.05.55.jpeg",
+
   // ABOUT page — official school posters displayed in the school
   requirementsFlyer: "/images/WhatsApp_Image_2026-07-18_at_07.45.22.jpeg",     // 2027 Requirements flyer
   coreValuesPoster: "/images/WhatsApp_Image_2026-07-19_at_14.03.32.jpeg",      // Core Values with Shona
@@ -254,17 +257,42 @@ export const newsItems = [
   },
 ];
 
-export const upcomingEvents = [
+export const allEvents = [
+  {
+    id: "0",
+    slug: "form-1-entrance-test-2027",
+    title: "Form 1 Entrance Test 2027",
+    startDate: "2026-07-25",
+    endDate: "2026-07-25",
+    endAt: "2026-07-25T13:00:00+02:00",
+    time: "08:00 – 13:00",
+    location: "First Class Private School",
+    venue: "8514/11 Mbizo, Kwekwe",
+    category: "Admissions / Entrance Test",
+    featured: true,
+    image: "/images/WhatsApp_Image_2026-07-20_at_18.05.55.jpeg",
+    fee: 30,
+    feeCurrency: "USD",
+    bring: ["A pen", "A pencil", "A ruler"],
+    contactNumbers: ["0773 870 090", "0713 687 669"],
+    curricula: ["ZIMSEC", "Cambridge"],
+    facilities: ["Day school", "Boarding"],
+    shortDescription:
+      "First Class Private School invites prospective Form 1 learners to sit for the 2027 entrance test. The school offers ZIMSEC and Cambridge curricula, with both day and boarding facilities available.",
+    supportingMessage: "Quality Education. Discipline. Excellence.",
+    closingSlogan: "Be Prepared. Be Confident. Be FCPS.",
+  },
   {
     id: "1",
     slug: "open-day",
     title: "Open Day 2026",
     startDate: "2026-08-05",
     endDate: "2026-08-05",
+    endAt: "2026-08-05T17:00:00+02:00",
     time: "09:00 \u2013 13:00",
     location: "FCPS Main Campus",
     category: "Open day",
-    featured: true,
+    featured: false,
     image: "/images/WhatsApp_Image_2026-07-17_at_10.40.17.jpeg",
   },
   {
@@ -273,6 +301,7 @@ export const upcomingEvents = [
     title: "Civics Day Celebrations",
     startDate: "2026-08-15",
     endDate: "2026-08-15",
+    endAt: "2026-08-15T14:00:00+02:00",
     time: "08:00 \u2013 14:00",
     location: "School Grounds",
     category: "Culture",
@@ -285,6 +314,7 @@ export const upcomingEvents = [
     title: "Educational Trip to Bulawayo",
     startDate: "2026-09-02",
     endDate: "2026-09-04",
+    endAt: "2026-09-04T18:00:00+02:00",
     time: "All day",
     location: "Bulawayo",
     category: "Trip",
@@ -292,6 +322,9 @@ export const upcomingEvents = [
     image: "/images/WhatsApp_Image_2026-07-19_at_15.39.07.jpeg",
   },
 ];
+
+// Past events archive. Events can be moved here manually, or the calendar will hide them automatically when their endAt passes.
+export const pastEvents: typeof allEvents = [];
 
 // ─── Downloads ────────────────────────────────────────────────────────────────
 
