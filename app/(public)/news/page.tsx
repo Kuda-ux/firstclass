@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { images, newsItems, newsImages } from "@/lib/data";
-import { Calendar } from "lucide-react";
+import { images, newsItems, newsImages, allEvents } from "@/lib/data";
+import { Calendar, Clock, MapPin, Star } from "lucide-react";
 
 function formatDate(dateString: string) {
   return new Date(dateString).toLocaleDateString("en-ZW", {
@@ -20,6 +22,8 @@ export const metadata = {
 };
 
 export default function NewsPage() {
+  const featuredEvent = allEvents.find((event) => event.featured);
+
   return (
     <>
       <PageHeader
@@ -28,6 +32,74 @@ export default function NewsPage() {
         description="Updates, notices and stories from First Class Private School. Click any poster to view it larger."
         image={images.aboutGrid2}
       />
+
+      {/* Featured event */}
+      {featuredEvent && (
+        <section className="bg-white py-16 md:py-20">
+          <Container>
+            <FadeIn>
+              <SectionHeader
+                eyebrow="Featured event"
+                title={featuredEvent.title}
+                className="mb-8"
+              />
+            </FadeIn>
+            <div className="grid gap-8 lg:grid-cols-2">
+              <FadeIn>
+                <Link
+                  href={`/events/${featuredEvent.slug}`}
+                  className="group block overflow-hidden rounded-sm border border-soft shadow-sm"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={featuredEvent.image}
+                      alt={featuredEvent.title}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  </div>
+                </Link>
+              </FadeIn>
+              <FadeIn delay={0.1}>
+                <div className="rounded-sm border-2 border-gold bg-cream p-6 md:p-8">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-gold px-3 py-1 text-xs font-bold text-white">
+                    <Star className="h-3.5 w-3.5" />
+                    {featuredEvent.category}
+                  </div>
+                  {featuredEvent.shortDescription && (
+                    <p className="mt-4 text-lg leading-relaxed text-charcoal">
+                      {featuredEvent.shortDescription}
+                    </p>
+                  )}
+                  <div className="mt-6 space-y-3 text-muted">
+                    <p className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4 text-gold" />
+                      {formatDate(featuredEvent.startDate)}
+                      {featuredEvent.endDate !== featuredEvent.startDate && ` – ${formatDate(featuredEvent.endDate)}`}
+                      , {featuredEvent.time}
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4 text-gold" />
+                      {featuredEvent.location}
+                      {featuredEvent.venue && `, ${featuredEvent.venue}`}
+                    </p>
+                    {typeof featuredEvent.fee === "number" && (
+                      <p className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-gold" />
+                        Fee: {featuredEvent.feeCurrency || "US$"}{featuredEvent.fee}
+                      </p>
+                    )}
+                  </div>
+                  <Button as="a" href={`/events/${featuredEvent.slug}`} className="mt-6">
+                    View event details
+                  </Button>
+                </div>
+              </FadeIn>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* News articles */}
       <section className="bg-cream py-16 md:py-24">
