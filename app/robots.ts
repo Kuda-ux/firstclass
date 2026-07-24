@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/admin", "/api"],
     },
-    sitemap: "https://firstclassprivate.ac.zw/sitemap.xml",
+    sitemap: "https://www.firstclassschool.co.zw/sitemap.xml",
   };
 }

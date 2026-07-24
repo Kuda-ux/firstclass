@@ -17,10 +17,15 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://firstclassprivate.ac.zw"),
-  title: "First Class Private School | Building Tomorrow's Christian Leaders from Kwekwe",
+  metadataBase: new URL("https://www.firstclassschool.co.zw"),
+  title: {
+    template: "%s | First Class Private School",
+    default: "First Class Private School | Building Tomorrow's Christian Leaders from Kwekwe",
+  },
   description:
     "First Class Private School (FCPS) is a Christ-centred private day and boarding school in Kwekwe, Zimbabwe, serving learners from Kwekwe and surrounding areas. We offer inclusive, affordable Forms 1–6 ZIMSEC and Cambridge education grounded in Christian values, Unhu/Ubuntu and practical skills.",
+  applicationName: "First Class Private School",
+  authors: [{ name: "First Class Private School" }],
   keywords: [
     "First Class Private School",
     "FCPS",
@@ -35,6 +40,9 @@ export const metadata: Metadata = {
     "boarding school",
     "day school",
     "Non Ducor Duco",
+    "entrance test",
+    "admissions",
+    "school in Kwekwe",
   ],
   openGraph: {
     title: "First Class Private School | Building Tomorrow's Christian Leaders from Kwekwe",
@@ -42,8 +50,16 @@ export const metadata: Metadata = {
       "A Christ-centred private day and boarding secondary school in Kwekwe, Zimbabwe, serving learners from Kwekwe and surrounding areas — offering ZIMSEC and Cambridge education for Forms 1–6.",
     type: "website",
     locale: "en_ZW",
-    url: "https://firstclassprivate.ac.zw",
-    images: ["/og-image.jpg"],
+    url: "/",
+    siteName: "First Class Private School",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "First Class Private School logo and crest",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -54,6 +70,20 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+  },
+  verification: {
+    google: "googlecb9e0a28b7d8003e",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
