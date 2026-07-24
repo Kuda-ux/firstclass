@@ -8,6 +8,7 @@ import { BoardingTeaser } from "@/components/sections/BoardingTeaser";
 import { MomentsGallery } from "@/components/sections/MomentsGallery";
 import { NewsEvents } from "@/components/sections/NewsEvents";
 import { AdmissionsCta } from "@/components/sections/AdmissionsCta";
+import { BusHireAd } from "@/components/sections/BusHireAd";
 import { ContactMap } from "@/components/sections/ContactMap";
 
 export const metadata = {
@@ -29,6 +30,7 @@ export default function HomePage() {
       <MomentsGallery />
       <NewsEvents />
       <AdmissionsCta />
+      <BusHireAd />
       <ContactMap />
     </>
   );

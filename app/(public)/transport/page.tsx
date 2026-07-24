@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { TransportForm } from "@/components/forms/TransportForm";
+import { BusHireAd } from "@/components/sections/BusHireAd";
 import { images, transportContent, siteSettings } from "@/lib/data";
 import { Bus, Info, Phone } from "lucide-react";
 
@@ -117,6 +118,8 @@ export default function TransportPage() {
           </div>
         </Container>
       </section>
+
+      <BusHireAd />
     </>
   );
 }

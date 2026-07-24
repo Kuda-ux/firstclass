@@ -93,6 +93,7 @@ export const images = {
   car1:    "/images/WhatsApp_Image_2026-07-17_at_10.40.06.jpeg",     // FCPS blue Honda Jazz
   car2:    "/images/WhatsApp_Image_2026-07-17_at_10.40.34.jpeg",     // FCPS blue car front
   fleet:   "/images/WhatsApp_Image_2026-07-17_at_10.40.12.jpeg",     // all vehicles together
+  busHire: "/images/Bus_Hiring_Ad.jpeg",                                // bus for hire flyer
 
   // STUDENT LIFE page header — large group at Chahwanda Stadium (sport trip)
   studentLife: "/images/WhatsApp_Image_2026-07-17_at_10.39.40.jpeg",
@@ -552,6 +553,44 @@ export const transportContent = {
   ],
   note:
     "Vehicle capacity, routes and availability must be confirmed with the school office before booking. A bus levy of $60 (once-off) applies to learners who use the school transport service.",
+};
+
+export const busHireContent = {
+  flyer: "/images/Bus_Hiring_Ad.jpeg",
+  title: "Bus for Hire",
+  subtitle: "Travel together in comfort and style",
+  services: [
+    {
+      title: "CHURCH CONFERENCES",
+      description:
+        "Travel together in comfort and unity. We make your spiritual journeys smooth and stress-free.",
+    },
+    {
+      title: "BIRTHDAYS",
+      description:
+        "Make birthdays memorable! We'll take you and your guests there in style.",
+    },
+    {
+      title: "FUNERALS",
+      description:
+        "Respectful, dignified and reliable transport during difficult times. We are here for you.",
+    },
+    {
+      title: "TRIPS",
+      description:
+        "School trips, family outings, group adventures — we take you there!",
+    },
+  ],
+  features: [
+    "SPACIOUS SEATING",
+    "AIR CONDITIONED",
+    "SAFE & RELIABLE",
+    "EXPERIENCED DRIVERS",
+  ],
+  contactLabel: "FOR MORE CONTACT",
+  phones: ["0773 870 090", "0782 171 343"],
+  address: "8514 Mbizo 11 Kwekwe",
+  slogan: "First Class Service, Every Journey!",
 };
 
 // ─── Legal ────────────────────────────────────────────────────────────────────
