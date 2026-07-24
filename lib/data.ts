@@ -593,6 +593,24 @@ export const busHireContent = {
   slogan: "First Class Service, Every Journey!",
 };
 
+export const sayNoToDrugsContent = {
+  flyer: "/images/Say_No_To_Drugs.jpeg",
+  title: "Say No to Drugs & Abuse",
+  subtitle: "A safe, caring and disciplined environment for every learner.",
+  school: "FIRST CLASS PRIVATE SCHOOL",
+  motto: "Non Ducor, Duco",
+  logoText: "FCPS",
+  messages: [
+    "STOP DRUG & SUBSTANCE ABUSE",
+    "SAY NO TO BULLYING",
+    "REPORT ANY FORM OF ABUSE",
+    "SAY NO TO SEXUAL ABUSE",
+    "SAY NO TO PHYSICAL ABUSE",
+    "SAY NO TO ANY FORM OF ABUSE",
+  ],
+  tagline: "Experimenting With Drugs, Destroys Your Life",
+};
+
 // ─── Legal ────────────────────────────────────────────────────────────────────
 
 export const privacyPolicy = `

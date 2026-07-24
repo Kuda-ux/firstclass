@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { SayNoToDrugs } from "@/components/sections/SayNoToDrugs";
 import { images } from "@/lib/data";
 
 const areas = [
@@ -146,6 +147,8 @@ export default function StudentLifePage() {
           </div>
         </Container>
       </section>
+
+      <SayNoToDrugs />
     </>
   );
 }
